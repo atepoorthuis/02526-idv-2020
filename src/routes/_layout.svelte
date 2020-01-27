@@ -8,6 +8,7 @@
 .openMenu {
 	@apply block;
 }
+
 </style>
 
 

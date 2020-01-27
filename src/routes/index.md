@@ -68,43 +68,41 @@ In the first half of the course, we focus on getting up to speed on the basic bu
         - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 4; 13-15)
 
 ### Block 3: Reactive Visualization
-5. Reactive Programming
+5. Declarative & Reactive Programming I (Introduction to Svelte)
     - Reading:
         - VAD Chapter 5: Marks and Channels
         - [A Better Way to Code](https://medium.com/@mbostock/a-better-way-to-code-2b1d2876a3a0)
-6. Reactive Programming
+6. Declarative & Reactive Programming II (Combining Svelte & D3)
     - Reading:
         - VAD Chapter 7: Arrange Tables
         - [Explorable Explanations](http://worrydream.com/ExplorableExplanations/)
-
 7. **BREAK**
-
 ### Block 4: Grammar of Graphics
-8. A Grammar of Graphics I
+1. A Grammar of Graphics I (Florence - a grammar for Svelte)
     - Reading:
         - Wickham's [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.html)
         - Wilkinson's Grammar of Graphics. Ch 1 Introduction; Ch 6 Scales; Ch 10 Aesthetics. [Access through SUTD Library](https://link.springer.com/book/10.1007%2F0-387-28695-0).
-9. A Grammar of Graphics II (Facets)
+2. A Grammar of Graphics II (Facets)
     - Reading:
         - VAD Chapter 5 & 7 (Review)
         - VAD Chapter 12: Facets into Multiple Views 
 
 ### Block 5: Maps & Visualization Systems
-10. Project Studio
-11. Filtering & Aggregation
+10. A Grammar of Graphics III (Interaction)
     - Reading:
         - VAD Chapter 11: Manipulate View
         - VAD Chapter 13: Reduce Items and Attributes  
         - VAD Chapter 14: Embed: Focus+Context
+11. Project Studio
 
 ### Block 6: Visualization Systems II
-12. Cartography
+12. Maps & Cartography
     - Reading:
         - VAD Chapter 8: Arrange Spatial Data
         - VAD Chapter 10: Map Color and Other Channels
         - Making Maps Chapter 8: Map Classification
         - Making Maps Chapter 9: Map Symbolization
-13. UI Design for visualization systems
+13. UI Design for viz systems & Project Studio
     - Reading:
         - VAD Chapter 15: Analysis Case Studies
 14. Final Project Studio
