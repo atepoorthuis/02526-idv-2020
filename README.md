@@ -1,88 +1,108 @@
-# sapper-template
+# 02.526: Interactive Data Visualization
+### Ate Poorthuis // ate_poorthuis@sutd.edu.sg  
+  
+**January Term 2020**  
+**Tue 2.30-4.00pm** Think Thank 17 (2.202)  
+**Thu 1-2.30pm** Think Thank 17 (2.202)  
+*Office Hours: By appointment*
 
-The default [Sapper](https://github.com/sveltejs/sapper) template, with branches for Rollup and webpack. To clone it and get started:
+## Course Description
+This course teaches students the concepts, skills and techniques of online, interactive map design and data visualization. In doing so, it covers both the modern web development workflow and Javascript programming. These fundamental programming tools and techniques are mastered in an applied context of designing and building interactive visualizations. Apart from a foundational understanding of the building blocks of the modern web (HTML, CSS, Javascript), students learn to build visualizations using industry-standard Javascript libraries through a series of lab-based assignments and projects. The course keeps a focus on the entire iterative design workflow throughout the semester and culminates in a project in which a sequence of prototypes leads to a final online, interactive data visualization.
 
-```bash
-# for Rollup
-npx degit "sveltejs/sapper-template#rollup" my-app
-# for webpack
-npx degit "sveltejs/sapper-template#webpack" my-app
-cd my-app
-npm install # or yarn!
-npm run dev
-```
+## Format
+The course is structured around two 1.5 hour classes per week that integrate lecture, discussion and in-class activities and exercises in an interactive manner. The class is further structured around 6 blocks (each lasting ~two weeks).
 
-Open up [localhost:3000](http://localhost:3000) and start clicking around.
+## Expectations
+Students are expected to be present and actively participate in each class, as well as on the class online forum (Slack). Before coming to class, you will have read the assigned readings and you are coming to class prepared to participate in discussion and exercises. 
 
-Consult [sapper.svelte.dev](https://sapper.svelte.dev) for help getting started.
+You are also expected to produce your own work, whether individually or in groups. Do not copy work from the internet or other published sources without proper citations. This is plagiarism and if a student is found to be doing so, he or she will be subject to disciplinary measures including potentially failing the course.
 
+## Assessment
+There will be a variety of assessments throughout the semester. Emphasis is on your performance overall, with relatively low weight placed on individual items. Continued participation throughout the semester will enable you to do well in this course.
 
-## Structure
+| Assessment Items                          | Percentage | Period          |
+|-------------------------------------------|------------|-----------------|
+| Class Participation                       | 15%        | Throughout term |
+| Assignments (five)                        | 40%        | Throughout term |
+| Final Project                             | 45%        | Week 14         |
 
-Sapper expects to find two directories in the root of your project —  `src` and `static`.
+### Assignments
+Each block consists of a series of exercises that culminate in an assignment/report that will be due before the start of the next block (Monday 23.59).
 
+### Final Project
+For the final project, you will work in groups of 1-3 students and develop a visualization project. The project can roughly take two direction. The first direction is focused on *communicating* certain insights or concepts through an interactive, explorable explanation. The second is focused on building a visualization system for *exploration* of a specific dataset or topic. In Week 6, you will hand in a project proposal that discusses the motivation for your project; its objectives; data requirements (where do you get it from? does it need extensive processing); visualization design/prototype; and a project schedule. A working prototype is due at the end of Week 12, with the final project (and an oral presentation) due at the end of Week 14. 
 
-### src
+## Deadlines
+Deadlines are as noted in the course syllabus or on the specific assignment. If something is due on a specific date, you have until midnight on that day to submit the assignment.
 
-The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
+## Textbook
+In addition to the readings listed below and weekly lab hand-outs, we use this textbook:
 
+- [*Visualization Analysis and Design*](https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/) (VAD), Tamara Munzner, CRC Press (2014)
 
-#### src/routes
+## Software
+We will only use open-source software in this course. Most of the course is based on HTML/CSS/JS, but we will also make use of [Vue.js](https://vuejs.org/) from Week 5 onwards. In the first weeks, we will use [CodeSandbox](https://codesandbox.io/) as our code editor. In later weeks, it is recommended to use a code editor installed on your own laptop. If you do not have a preference yet, I suggest you use [Visual Studio Code](https://code.visualstudio.com/). You also need to install [Git](https://git-scm.com/download) (if you're on Mac, I suggest you install [Homebrew](http://brew.sh/) first and install Git with `brew install git`).
 
-This is the heart of your Sapper app. There are two kinds of routes — *pages*, and *server routes*.
+## Detailed Outline
+In the first half of the course, we focus on getting up to speed on the basic building blocks of data visualization on the web. We do so by recreating visualizations from Du Bois' 1900 Paris Exposition. In the second half of the course, we build on this foundation by moving from individual charts to *systems* of (interactive) visualizations, tentatively using a dataset on HDB Resale Prices (explored more quantitatively in 02.522 Computational Urban Analysis).
 
-**Pages** are Svelte components written in `.svelte` files. When a user first visits the application, they will be served a server-rendered version of the route in question, plus some JavaScript that 'hydrates' the page and initialises a client-side router. From that point forward, navigating to other pages is handled entirely on the client for a fast, app-like feel. (Sapper will preload and cache the code for these subsequent pages, so that navigation is instantaneous.)
+### Block 1: Introduction to a 'modern' visualization workflow
+1. HTML / SVG ('Drawing')
+    - Reading:
+        - VAD Chapter 1: What's Vis and Why Do It?
+        - [Introduction to HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML) (from `Introduction to HTML overview` to `Document and website structure`)
+        - [SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial) (from `Introduction` to `Paths` + `Texts`)
+2. CSS / Git workflow ('Styling') 
+    - Reading:
+        - VAD Chapter 2: What: Data Abstraction?
+        - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) (from `Introduction to CSS overview` to `Simple Selectors`)
+        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
 
-**Server routes** are modules written in `.js` files, that export functions corresponding to HTTP methods. Each function receives Express `request` and `response` objects as arguments, plus a `next` function. This is useful for creating a JSON API, for example.
+### Block 2: Programmatic Visualization
+3. Javascript Fundamentals I
+    - Reading:
+        - VAD Chapter 3: Why: Task Abstraction
+        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 1-3)
+4. Javascript Fundamentals II ('Interacting')
+    - Reading:
+        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 4; 13-15)
 
-There are three simple rules for naming the files that define your routes:
+### Block 3: Reactive Visualization
+5. Declarative & Reactive Programming I (Introduction to Svelte)
+    - Reading:
+        - VAD Chapter 5: Marks and Channels
+        - [A Better Way to Code](https://medium.com/@mbostock/a-better-way-to-code-2b1d2876a3a0)
+6. Declarative & Reactive Programming II (Combining Svelte & D3)
+    - Reading:
+        - VAD Chapter 7: Arrange Tables
+        - [Explorable Explanations](http://worrydream.com/ExplorableExplanations/)
+7. **BREAK**
+### Block 4: Grammar of Graphics
+1. A Grammar of Graphics I (Florence - a grammar for Svelte)
+    - Reading:
+        - Wickham's [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.html)
+        - Wilkinson's Grammar of Graphics. Ch 1 Introduction; Ch 6 Scales; Ch 10 Aesthetics. [Access through SUTD Library](https://link.springer.com/book/10.1007%2F0-387-28695-0).
+2. A Grammar of Graphics II (Facets)
+    - Reading:
+        - VAD Chapter 5 & 7 (Review)
+        - VAD Chapter 12: Facets into Multiple Views 
 
-* A file called `src/routes/about.svelte` corresponds to the `/about` route. A file called `src/routes/blog/[slug].svelte` corresponds to the `/blog/:slug` route, in which case `params.slug` is available to the route
-* The file `src/routes/index.svelte` (or `src/routes/index.js`) corresponds to the root of your app. `src/routes/about/index.svelte` is treated the same as `src/routes/about.svelte`.
-* Files and directories with a leading underscore do *not* create routes. This allows you to colocate helper modules and components with the routes that depend on them — for example you could have a file called `src/routes/_helpers/datetime.js` and it would *not* create a `/_helpers/datetime` route
+### Block 5: Maps & Visualization Systems
+10. A Grammar of Graphics III (Interaction)
+    - Reading:
+        - VAD Chapter 11: Manipulate View
+        - VAD Chapter 13: Reduce Items and Attributes  
+        - VAD Chapter 14: Embed: Focus+Context
+11. Project Studio
 
-
-### static
-
-The [static](static) directory contains any static assets that should be available. These are served using [sirv](https://github.com/lukeed/sirv).
-
-In your [service-worker.js](src/service-worker.js) file, you can import these as `files` from the generated manifest...
-
-```js
-import { files } from '@sapper/service-worker';
-```
-
-...so that you can cache them (though you can choose not to, for example if you don't want to cache very large files).
-
-
-## Bundler config
-
-Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever plugins you'd like.
-
-
-## Production mode and deployment
-
-To start a production version of your app, run `npm run build && npm start`. This will disable live reloading, and activate the appropriate bundler plugins.
-
-You can deploy your application to any environment that supports Node 8 or above. As an example, to deploy to [Now](https://zeit.co/now), run these commands:
-
-```bash
-npm install -g now
-now
-```
-
-
-## Using external components
-
-When using Svelte components installed from npm, such as [@sveltejs/svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list), Svelte needs the original component source (rather than any precompiled JavaScript that ships with the component). This allows the component to be rendered server-side, and also keeps your client-side app smaller.
-
-Because of that, it's essential that the bundler doesn't treat the package as an *external dependency*. You can either modify the `external` option under `server` in [rollup.config.js](rollup.config.js) or the `externals` option in [webpack.config.js](webpack.config.js), or simply install the package to `devDependencies` rather than `dependencies`, which will cause it to get bundled (and therefore compiled) with your app:
-
-```bash
-npm install -D @sveltejs/svelte-virtual-list
-```
-
-
-## Bugs and feedback
-
-Sapper is in early development, and may have the odd rough edge here and there. Please be vocal over on the [Sapper issue tracker](https://github.com/sveltejs/sapper/issues).
+### Block 6: Visualization Systems II
+12. Maps & Cartography
+    - Reading:
+        - VAD Chapter 8: Arrange Spatial Data
+        - VAD Chapter 10: Map Color and Other Channels
+        - Making Maps Chapter 8: Map Classification
+        - Making Maps Chapter 9: Map Symbolization
+13. UI Design for viz systems & Project Studio
+    - Reading:
+        - VAD Chapter 15: Analysis Case Studies
+14. Final Project Studio
