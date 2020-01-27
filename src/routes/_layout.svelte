@@ -10,6 +10,11 @@
 }
 </style>
 
+
+<svelte:head>
+  <title>02.526: Interactive Data Visualization</title>
+</svelte:head>
+
 <div class="flex m-5 mt-8 text-gray-800 font-serif font-light">
 	<div class="block font-sans text-base font-semibold tracking-tight">
 		<button on:click={() => openMenu ^= true} class="sm:hidden mb-4 mr-4 p-2 border rounded border-teal-light">

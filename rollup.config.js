@@ -7,6 +7,7 @@ import { terser } from 'rollup-plugin-terser'
 import config from 'sapper/config/rollup.js'
 import sveltePreprocess from 'svelte-preprocess'
 import postcss from 'rollup-plugin-postcss'
+import { sveltex } from '@snlab/sveltex-unified'
 import pkg from './package.json'
 
 const mode = process.env.NODE_ENV
@@ -28,9 +29,13 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode)
       }),
       svelte({
+        extensions: ['.svelte', '.md'],
         dev,
         hydratable: true,
-        preprocess,
+        preprocess: [
+          preprocess,
+          sveltex({ extension: '.md' })
+        ],
         		emitCss: true
       }),
       resolve({
@@ -73,9 +78,13 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode)
       }),
       svelte({
+        extensions: ['.svelte', '.md'],
         generate: 'ssr',
         dev,
-        preprocess
+        preprocess: [
+          preprocess,
+          sveltex({ extension: '.md' })
+        ]
       }),
       postcss({
         minimize: true,
