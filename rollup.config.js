@@ -33,8 +33,8 @@ export default {
         dev,
         hydratable: true,
         preprocess: [
-          preprocess,
-          sveltex({ extension: '.md' })
+          sveltex({ extension: '.md' }),
+          preprocess
         ],
         		emitCss: true
       }),
@@ -82,8 +82,8 @@ export default {
         generate: 'ssr',
         dev,
         preprocess: [
-          preprocess,
-          sveltex({ extension: '.md' })
+          sveltex({ extension: '.md' }),
+          preprocess
         ]
       }),
       postcss({

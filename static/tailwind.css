@@ -85,7 +85,11 @@ ol {
   @apply list-decimal list-inside;
 }
 
+/* code layout */
 
+code {
+  @apply bg-gray-200 text-sm p-1;
+}
 
 /* table layout */
 
