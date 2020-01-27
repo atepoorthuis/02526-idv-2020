@@ -48,5 +48,58 @@
 
 @tailwind base;
 
+/* global font styles */
+
+h1 {
+  @apply text-2xl font-sans font-semibold mb-4 ;
+}
+h2 {
+  @apply text-xl font-sans font-semibold mt-3 mb-3 border-b border-gray-400;
+}
+h3 {
+  @apply text-base font-sans font-semibold mt-1 mb-1;
+}
+p {
+  @apply mt-1 mb-2;
+}
+strong {
+  @apply font-semibold;
+}
+a {
+  @apply underline;
+}
+
+ul {
+  @apply list-disc list-inside mb-2; 
+}
+
+ol > li > ul {
+  @apply ml-5;
+}
+
+ul > li > ul {
+  @apply list-circle list-inside ml-5; 
+}
+
+ol {
+  @apply list-decimal list-inside;
+}
+
+
+
+/* table layout */
+
+table {
+  @apply mt-3 mb-3 table-auto border-collapse border-2 border-gray-500;
+}
+
+tr > th {
+  @apply border border-gray-400 px-4 py-2;
+}
+
+tr > td {
+  @apply border border-gray-400 px-4 py-2;
+}
+
 @tailwind components;
 @tailwind utilities;
