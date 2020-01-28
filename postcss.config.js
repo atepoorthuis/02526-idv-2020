@@ -1,10 +1,27 @@
+const sveltex = require('@snlab/sveltex-unified')
+const purgeHtml = require('purgecss-from-html')
+const purgeSvelte = require('purgecss-from-svelte')
 const tailwindcss = require('tailwindcss')
 
+const purgeFromMd = (content) => {
+  const html = sveltex.processor.processSync(content).toString()
+  return purgeSvelte.extract(html)
+}
+
 const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: ['./src/**/*.svelte',
-    './src/**/*.md',
-    './src/**/*.html'],
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
+  content: ['./src/**/*.md', './src/**/*.svelte'],
+  extractors: [{
+    extractor: purgeFromMd,
+    extensions: ['md']
+  },
+  {
+    extractor: purgeHtml,
+    extensions: ['html']
+  },
+  {
+    extractor: purgeSvelte.extract,
+    extensions: ['svelte']
+  }]
 })
 
 module.exports = {

@@ -36,7 +36,7 @@ export default {
           sveltex({ extension: '.md' }),
           preprocess
         ],
-        		emitCss: true
+        emitCss: true
       }),
       resolve({
         browser: true,
@@ -45,7 +45,7 @@ export default {
       commonjs(),
 
       legacy && babel({
-        extensions: ['.js', '.mjs', '.html', '.svelte'],
+        extensions: ['.js', '.mjs', '.html', '.svelte', '.md'],
         runtimeHelpers: true,
         exclude: ['node_modules/@babel/**'],
         presets: [
@@ -89,7 +89,7 @@ export default {
       postcss({
         minimize: true,
         extract: './static/index.css'
-	    }),
+      }),
       resolve({
         dedupe
       }),

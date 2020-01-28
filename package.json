@@ -35,6 +35,8 @@
     "eslint-plugin-svelte3": "^2.7.3",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.0",
+    "purgecss-from-html": "^2.0.3",
+    "purgecss-from-svelte": "^2.0.2",
     "rollup": "^1.30.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-postcss": "^2.0.5",
