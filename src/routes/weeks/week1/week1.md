@@ -32,7 +32,8 @@ We can look at an interactive version of our HTML document in the _CodeSandBox_ 
 - `p`
 - `div`
 
-<!-- @[codesandbox](week1_stage_1?codemirror=1&view=split&fontsize=12&hidenavigation=1) -->
+::: codesandbox sandboxes/week1_stage_1 codemirror=1&view=split&fontsize=12&hidenavigation=1
+:::
 
 ```md
 We will do this section in class together (you can do it right there in the CodeSandbox!) – we will fill in this empty space with our solution and a run-through of how each element is (to be) used afterwards.
