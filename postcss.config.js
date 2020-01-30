@@ -28,7 +28,7 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
       extensions: ['html']
     },
     {
-      extractor: purgeSvelte.extract,
+      extractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || [],
       extensions: ['svelte']
     }]
 })
