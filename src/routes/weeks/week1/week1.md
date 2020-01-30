@@ -51,6 +51,8 @@ We will do this section in class together (you can do it right there in the Code
 :::
 
 <!-- In this case, we use the `<div>` element to organize our content into a header section and a footer section.
+
+Do you notice the `<!--` bit? That's an HTML comment - you can use them to add comments in the code that will not be rendered or interpreted as HTML.
 ```html
 <div>
   <!-- title/header content goes here - ->
@@ -72,25 +74,37 @@ We will do this section in class together (you can do it right there in the Code
 ::: -->
 
 ## SVG
-To start drawing the graphical parts of the chart, we will have to make an excursion from HTML to SVG. SVG is almost like HTML but it is specifically designed to create graphics. It's very versatile and not constrained to just browsers. If you're familiar with drawing/vector programs like Adobe Illustrator, they can all create, read and export SVG files. Before we continue, do take note of the first section of  the MDN [SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial).
+To start drawing the **graphical parts** of the chart, we will have to make an excursion from HTML to Scalable Vector Graphics (SVG) – think of it as an extension to HTML. SVG is almost like HTML – it also based on elements that are indicated via tags – but it is specifically designed to create graphics. It's very versatile and not constrained to just browsers. If you're familiar with drawing or vector programs like Adobe Illustrator, they also can create, read and export SVG files. What HTML is to a document, SVG is to a graphic: a consistent way to describe its structure.
 
-We will create an SVG canvas to hold our chart of 500 by 500 pixels. Add this `svg` element to your CodeSandBox in the right location. Once it is placed, you should see the page update and show an empty placeholder where we will now build our graph. 
+::: div callout
+Before you continue, please read the Introduction and Getting Started sections of the MDN [SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial).
+:::
+
+The foundational layer of a graphic constructed with SVG is a an empty 'canvas' that will become the container for anything we'd like to draw within it. You do this by adding an `svg` element ([MDN reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg)) with a certain width and height to the page. You already know how to create elements in HTML and, luckily, SVG elements are specified in the exact same way. To add the width and height to this element, you need to add them as *attributes* to the element. Both SVG and HTML elements can have such attributes and you can always look up which elements are available at the handy MDN reference pages (that's why we link to them consistently!). You specify attributes like this:
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500">
+<element nameOfYourAttribute="valueOfYourAttribute">content of your element</element>
+```
+
+You can add more than one attribute by separating them with a space. In our case, we want to create an SVG element to hold our chart of 600 by 600 pixels. Add the below `svg` element to your CodeSandBox in the right location (between the header and the footer). Once it is placed, you should see the page update and show an empty placeholder where we will now build our graph. 
+
+```html
+<svg width="600" height="600">
     <!-- svg content goes here -->
 </svg>
 ```
 
 Let's start by drawing the first 'entry' in the bar chart. To do so we only need to make use of two types of SVG elements:
-- `text` (for the year, dash, and population labels)
-- `rect` (for the actual bar)
+- `text` (for the year, dash, and population labels) - [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text)
+- `rect` (for the actual bar) - [MDN](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect)
 
-```md
+::: div callout
+Note that you will have to read the MDN reference page to find out which attributes you need to use for each element to position it correctly within the graphic. This is good practice because there are so many new elements to learn about that translating from a reference page to your particular application is an important skill.
+
 We will do this section in class together (you can do it right there in the CodeSandbox!) – we will fill in this empty space with our solution and a run-through of how each element is (to be) used afterwards.
-```
+:::
 
-Once you have created the first entry/bar, it is a matter of rinse & repeat to draw all the other bars. Let's add them all! To organize each entry in a logical unit, we can use the `g` or group element. Like so:
+Once you have created the first entry/bar, it is a matter of rinse & repeat to draw all the other bars. Let's add them all! To organize each entry in a logical unit, we can use the `g` or [group element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g). It just like `div` but then specially made for graphics. Like so (the attributes of `text` and `rect` are left out):
 
 ```html
 <g>
@@ -102,14 +116,14 @@ Once you have created the first entry/bar, it is a matter of rinse & repeat to d
 </g>
 ```
 
-```md
+::: div callout
 We will do this section in class together (you can do it right there in the CodeSandbox!) – we will fill in this empty space with our solution and a run-through of how each element is (to be) used afterwards.
-```
+:::
 
 Ultimately, our graph will look some thing like this.
 
 ![repro](/images/_repro.png)
 
-As we expect, this is not a complete reproduction of the Du Bois graph but it has all the structural elements that it needs. In other words, everything that needs to be drawn, is drawn – just not with exactly the right styling. Styling is a task for CSS, which we will cover in the next week.
+As we expect, this is not a complete reproduction of the Du Bois graph yet but it has all the structural elements in place. In other words, everything that needs to be drawn, is drawn – just not with exactly the right styling. Styling is a task for CSS, which we will cover in the next week.
 
 If you have time left and want to work ahead, as part of this first block's assignment, you will not only reproduce this particular graph but also choose another graph to reproduce completely by yourself. Browse through the available choices at the [Library of Congress](http://www.loc.gov/pictures/search/?q=drawing&co=anedub&st=gallery) – you can choose your own challenge-level (e.g. those curved bar charts require some extra thinking..), but for now stay away from the map-based figures. We will pick up the thread on styling/CSS next week but you already now enough to reproduce the structure of your graph with HTML.
