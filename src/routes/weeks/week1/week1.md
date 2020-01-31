@@ -43,7 +43,7 @@ We can look at an interactive version of our HTML document in the _CodeSandBox_ 
 - `p` - creates a paragraph element, usually a block of text. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p).
 - `div` - creates a container element. It has no specific meaning or impact on how things are rendered but can, for example, be used to group similar things together. [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div).
 
-::: codesandbox sandboxes/week1_stage_1 codemirror=1&view=split&fontsize=12&hidenavigation=1
+::: codesandbox sandboxes/week1_stage_1 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
 
 ::: div callout

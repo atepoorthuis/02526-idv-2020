@@ -77,6 +77,10 @@ ol > li > ul {
   @apply ml-5;
 }
 
+li {
+  @apply mb-1;
+}
+
 ul > li > ul {
   @apply list-circle list-inside ml-5; 
 }
@@ -88,7 +92,13 @@ ol {
 /* code layout */
 
 code {
-  @apply bg-gray-200 text-sm p-1;
+  @apply bg-gray-200 text-xs p-1;
+  @screen sm {
+    @apply text-xs;
+  }
+  @screen md {
+    @apply text-sm;
+  }
 }
 
 /* table layout */
@@ -107,7 +117,11 @@ tr > td {
 
 /* callouts */
 .callout {
-  @apply bg-green-100 border-green-500 border-l-8 my-4 px-10 py-3 font-sans text-base leading-snug;
+  @apply bg-green-100 border-green-500 border-l-8 my-4 px-10 py-3 font-sans leading-snug;
+}
+
+.csb {
+  @apply my-4 border-orange-200 border-4 rounded;
 }
 
 @tailwind components;
