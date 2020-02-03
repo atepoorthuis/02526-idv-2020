@@ -83,7 +83,9 @@ Before you continue, please read the Introduction and Getting Started sections o
 The foundational layer of a graphic constructed with SVG is a an empty 'canvas' that will become the container for anything we'd like to draw within it. You do this by adding an `svg` element ([MDN reference](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/svg)) with a certain width and height to the page. You already know how to create elements in HTML and, luckily, SVG elements are specified in the exact same way. To add the width and height to this element, you need to add them as *attributes* to the element. Both SVG and HTML elements can have such attributes and you can always look up which elements are available at the handy MDN reference pages (that's why we link to them consistently!). You specify attributes like this:
 
 ```html
-<element nameOfYourAttribute="valueOfYourAttribute">content of your element</element>
+<element nameOfYourAttribute="valueOfYourAttribute">
+  content of your element
+</element>
 ```
 
 You can add more than one attribute by separating them with a space. In our case, we want to create an SVG element to hold our chart of 600 by 600 pixels. Add the below `svg` element to your CodeSandBox in the right location (between the header and the footer). Once it is placed, you should see the page update and show an empty placeholder where we will now build our graph. 
@@ -127,3 +129,12 @@ Ultimately, our graph will look some thing like this.
 As we expect, this is not a complete reproduction of the Du Bois graph yet but it has all the structural elements in place. In other words, everything that needs to be drawn, is drawn – just not with exactly the right styling. Styling is a task for CSS, which we will cover in the next week.
 
 If you have time left and want to work ahead, as part of this first block's assignment, you will not only reproduce this particular graph but also choose another graph to reproduce completely by yourself. Browse through the available choices at the [Library of Congress](http://www.loc.gov/pictures/search/?q=drawing&co=anedub&st=gallery) – you can choose your own challenge-level (e.g. those curved bar charts require some extra thinking..), but for now stay away from the map-based figures. We will pick up the thread on styling/CSS next week but you already now enough to reproduce the structure of your graph with HTML.
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- Inserting HTML elements through opening and closing tags.
+- When & how to use `<h1>-<h6>`, `<p>` and `<div>` HTML elements.
+- Inserting SVG elements through opening and closing tags (including self-closing elements)
+- When & how to use `<svg>`, `<text>`, `<rect>` and `<g>` SVG elements.
+- When & how to assign attributes to SVG elements.
+- Use MDN to search SVG/HTML documentation and adopt new elements and their attributes.
