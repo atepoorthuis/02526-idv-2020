@@ -1,3 +1,6 @@
+---
+solution: false
+---
 # Week 1: HTML / SVG ('Drawing')
 
 ## Introduction
@@ -50,18 +53,19 @@ We can look at an interactive version of our HTML document in the _CodeSandBox_ 
 We will do this section in class together (you can do it right there in the CodeSandbox!) – we will fill in this space with our solution and a run-through of how each element is (to be) used afterwards.
 :::
 
-<!-- In this case, we use the `<div>` element to organize our content into a header section and a footer section.
+::: solution show
+In this case, we use the `<div>` element to organize our content into a header section and a footer section.
 
 Do you notice the `<!--` bit? That's an HTML comment - you can use them to add comments in the code that will not be rendered or interpreted as HTML.
 ```html
 <div>
-  <!-- title/header content goes here - ->
+  <!-- title/header content goes here -->
   <h1>Increase of the Negro population in the United States of America.</h1>
   <h2>Accroissement de la population Negre aux Etats Unis d' Amerique.</h2>
   <h3>Done by Atlanta University.</h3>
 </div>
 <div>
-  <!-- footer content goes here - ->
+  <!-- footer content goes here -->
   <p>
     Plate 39. Population is a common subject of many of the charts generated
     by the Atlanta University team. The data set depicted here is unique in
@@ -70,8 +74,9 @@ Do you notice the `<!--` bit? That's an HTML comment - you can use them to add c
   </p>
 </div>
 ```
-::: codesandbox sandboxes/week1_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1
-::: -->
+  ::: codesandbox sandboxes/week1_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
+  :::
+:::
 
 ## SVG
 To start drawing the **graphical parts** of the chart, we will have to make an excursion from HTML to Scalable Vector Graphics (SVG) – think of it as an extension to HTML. SVG is almost like HTML – it also based on elements that are indicated via tags – but it is specifically designed to create graphics. It's very versatile and not constrained to just browsers. If you're familiar with drawing or vector programs like Adobe Illustrator, they also can create, read and export SVG files. What HTML is to a document, SVG is to a graphic: a consistent way to describe its structure.

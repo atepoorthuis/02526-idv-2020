@@ -124,5 +124,24 @@ tr > td {
   @apply my-4 border-orange-200 border-4 rounded;
 }
 
+/* solutions */
+
+details {
+  @apply border-green-500 border-4 rounded py-2 px-4;
+}
+
+summary {
+  @apply font-sans font-semibold;
+}
+
+details[open] summary {
+  @apply pb-2 mb-2 border-b-2 border-gray-500;
+}
+
+.solutionContent {
+  @apply px-4;
+}
+
+
 @tailwind components;
 @tailwind utilities;
