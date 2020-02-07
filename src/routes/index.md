@@ -56,11 +56,11 @@ In the first half of the course, we focus on getting up to speed on the basic bu
     - Reading:
         - VAD Chapter 2: What: Data Abstraction?
         - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) (from `Introduction to CSS overview` to `Simple Selectors`)
-        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
 
 ### Block 2: Programmatic Visualization
 3. Javascript Fundamentals I
     - Reading:
+        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
         - VAD Chapter 3: Why: Task Abstraction
         - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 1-3)
 4. Javascript Fundamentals II ('Interacting')
@@ -78,11 +78,11 @@ In the first half of the course, we focus on getting up to speed on the basic bu
         - [Explorable Explanations](http://worrydream.com/ExplorableExplanations/)
 7. **BREAK**
 ### Block 4: Grammar of Graphics
-1. A Grammar of Graphics I (Florence - a grammar for Svelte)
+8. A Grammar of Graphics I (Florence - a grammar for Svelte)
     - Reading:
         - Wickham's [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.html)
         - Wilkinson's Grammar of Graphics. Ch 1 Introduction; Ch 6 Scales; Ch 10 Aesthetics. [Access through SUTD Library](https://link.springer.com/book/10.1007%2F0-387-28695-0).
-2. A Grammar of Graphics II (Facets)
+9. A Grammar of Graphics II (Facets)
     - Reading:
         - VAD Chapter 5 & 7 (Review)
         - VAD Chapter 12: Facets into Multiple Views 
