@@ -55,7 +55,7 @@ In the first half of the course, we focus on getting up to speed on the basic bu
 2. CSS / Git workflow ('Styling') 
     - Reading:
         - VAD Chapter 2: What: Data Abstraction?
-        - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) (from `Introduction to CSS overview` to `Simple Selectors`)
+        - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps) (from `CSS First steps Overview` to `Getting Started with CSS`)
 
 ### Block 2: Programmatic Visualization
 3. Javascript Fundamentals I
