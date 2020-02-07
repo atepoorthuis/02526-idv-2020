@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 1: HTML / SVG ('Drawing')
 
@@ -53,7 +53,7 @@ We can look at an interactive version of our HTML document in the _CodeSandBox_ 
 We will do this section in class together (you can do it right there in the CodeSandbox!) – we will fill in this space with our solution and a run-through of how each element is (to be) used afterwards.
 :::
 
-::: solution show
+::: solution
 In this case, we use the `<div>` element to organize our content into a header section and a footer section.
 
 Do you notice the `<!--` bit? That's an HTML comment - you can use them to add comments in the code that will not be rendered or interpreted as HTML.
@@ -111,6 +111,45 @@ Note that you will have to read the MDN reference page to find out which attribu
 We will do this section in class together (you can do it right there in the CodeSandbox!) – we will fill in this empty space with our solution and a run-through of how each element is (to be) used afterwards.
 :::
 
+::: solution
+We will have to make good use of the *attributes* available for both the `text` and the `rect` element. Most importantly, we need to *position* elements so they get drawn at the right location within the blank canvas that we have created. To do this, it is very important to remember that the [coordinate system for SVGs](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Positions) (and HTML in general) has an origin (coordinate `0,0`) in the top-left corner. In our case, this means that the `(600,600)` coordinate will be in the bottom-right corner of the SVG.
+
+We can either eye-ball the positions in the original graph (and some trial and error) or use a pixel measuring tool (e.g. Apple's Preview) to take more exact measurements on the positions and dimensions in the original graph:
+![Measuring pixels in DuBois graph](/images/dubois_pixel_measure.png)
+
+Once we have measured the left and top margins as well as the dimensions of the rectangle we can use these to set the correct attributes.
+
+```html
+<svg width="600" height="600">
+  <text x="22.5" y="15">1750</text>
+  <text x="70" y="15">–</text>
+  <text x="100" y="15">220,000</text>
+  <rect x="165" y="15" height="11" width="17" />
+</svg>
+```
+
+Note that the text and the rectangle do not seem to appear at the same level: 
+![Rect baseline](/images/rect_text_baseline.png)
+
+That is because rectangles (and other graphical elements) have their position 'baseline' at the top of the element, while the default baseline for text elements is at the bottom of the element. One of the quirks of web development! There are a few ways to address this discrepancy. For now, we will use the [dominant baseline](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dominant-baseline) attribute on the `text` element. This only works well in Chrome but it is the simplest solution. In later weeks, we will cover more solid solutions for this. We also use the opportunity to right-align the third text element by changing the [anchor point](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-anchor) to the 'end' of the element (defaults to beginning).
+
+```html
+<svg width="600" height="600">
+  <text x="22.5" y="15" dominant-baseline="hanging">1750</text>
+  <text x="70" y="15" dominant-baseline="hanging">–</text>
+  <text x="153" y="15" dominant-baseline="hanging" text-anchor="end">
+    220,000
+  </text>
+  <rect x="165" y="15" height="11" width="17" />
+</svg>
+```
+
+Bringing this all together in a single sandbox:
+
+  ::: codesandbox sandboxes/week1_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
+  :::
+:::
+
 Once you have created the first entry/bar, it is a matter of rinse & repeat to draw all the other bars. Let's add them all! To organize each entry in a logical unit, we can use the `g` or [group element](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g). It just like `div` but then specially made for graphics. Like so (the attributes of `text` and `rect` are left out):
 
 ```html
@@ -130,6 +169,13 @@ We will do this section in class together (you can do it right there in the Code
 Ultimately, our graph will look some thing like this.
 
 ![repro](/images/_repro.png)
+
+::: solution
+  Your final code should look similar to the below sandbox.
+
+  ::: codesandbox sandboxes/week1_stage_final codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
+  :::
+:::
 
 As we expect, this is not a complete reproduction of the Du Bois graph yet but it has all the structural elements in place. In other words, everything that needs to be drawn, is drawn – just not with exactly the right styling. Styling is a task for CSS, which we will cover in the next week.
 
