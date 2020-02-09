@@ -1,5 +1,5 @@
 ---
-solution: true
+solution: false
 ---
 # Week 2: CSS ('Styling')
 
@@ -139,7 +139,7 @@ Bonus points:
 
 Your final results should look something like this – not that far off from the original!
 
-![](./Week2_final.png)
+![Screenshot of final graph](/images/week2_final.png)
 
 ::: solution
 Note that we have moved our CSS from including it inside of a `<style>` element in our main HTML document to a separate file. As styling rules can grow quite large, this is often a useful practice to keep the size and structure of your documents somewhat manageable. You can do this by copy-pasting the styling rules to a new file (we called it `style.css`, but you can call it whatever you like) and instruct the browser to fetch and use it by including `<link href="style.css" rel="stylesheet" />` in the `head` of the HTML document, just like we did with our custom fonts.

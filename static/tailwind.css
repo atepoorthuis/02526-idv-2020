@@ -77,6 +77,10 @@ ol > li > ul {
   @apply ml-5;
 }
 
+ul > li > ol {
+  @apply ml-5;
+}
+
 li {
   @apply mb-1;
 }
