@@ -20,6 +20,8 @@ a {
 	<ul>
 		<li><a href='/'>Syllabus</a></li>
 		<li><a href='/weeks/week1/week1'>Week 1: HTML / SVG ('Drawing')</a></li>
+		<li><a href='/weeks/week2/week2'>Week 2: CSS ('Styling')</a></li>
+		<li><a href='/assignments/assignment1'>Assignment 1</a></li>
 	</ul>
 
 </nav>
