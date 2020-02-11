@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 2: CSS ('Styling')
 
