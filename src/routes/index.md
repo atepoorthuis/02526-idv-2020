@@ -60,12 +60,12 @@ In the first half of the course, we focus on getting up to speed on the basic bu
 ### Block 2: Programmatic Visualization
 3. Javascript Fundamentals I
     - Reading:
-        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
         - VAD Chapter 3: Why: Task Abstraction
-        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 1-3)
+        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 1-4)
 4. Javascript Fundamentals II ('Interacting')
     - Reading:
-        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 4; 13-15)
+        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
+        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 13-15)
 
 ### Block 3: Reactive Visualization
 5. Declarative & Reactive Programming I (Introduction to Svelte)
