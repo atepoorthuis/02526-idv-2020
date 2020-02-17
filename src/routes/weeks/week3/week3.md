@@ -128,7 +128,7 @@ let separatorLabel = '–'
 let populationLabel = '220,000'
 ```
 
-With this code, you create three variables but you don't see any results on the screen! To help us understand the 'content' of a variable, we can [log it to the console](https://eloquentjavascript.net/01_values.html#p_edv0ySDJvj) with `console.log()`.
+With this code, you create three variables but you don't see any results on the screen! To help us understand the 'content' of a variable, we can [log it to the console](https://eloquentjavascript.net/02_program_structure.html#h_6+Vb3XQoaa) with `console.log()`.
 
 ```js
 console.log(populationLabel) // check out the console 
@@ -158,7 +158,7 @@ We will do this section in class together.
 :::
 
 ::: solution
-Note that we use the `let` keyword here but could also have used `const` for these values as they are constant and will not change. You can read more about the difference in [ES Chapter 2](https://eloquentjavascript.net/02_program_structure.html#p_ReUkO4pLEi). For simplicity, we use `let` exclusively here.
+Note that we use the `let` keyword here but could also have used `const` for these values as they are constant and will not change. You can read more about the difference in [EJ Chapter 2](https://eloquentjavascript.net/02_program_structure.html#p_ReUkO4pLEi). For simplicity, we use `let` exclusively here.
 
 ::: codesandbox sandboxes/week3_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
@@ -166,6 +166,153 @@ Note that we use the `let` keyword here but could also have used `const` for the
 :::
 
 ### Updating the DOM
- 
+We have now collected all the essential ingredients for our bar element in variables. This makes us ready for the next step: actually drawing the bar element on the page. To achieve this we need to walk through a few key steps:
 
-### loop
+1. Select the SVG element that already exists within the DOM.
+2. Create a new `<g>` element.
+3. Create three new `<text>` elements with the right properties, and add them as children to the `<g>` element.
+4. Create a single `<rect>` element with the right properties, and add them as another child to the `<g>` element.
+5. Add the `<g>` element to the SVG element.
+
+To do this, we will make use of a set of JS functions that help to manipulate the DOM. These are built-in functions available in any web document. As you can read in [EJ Chapter 2](https://eloquentjavascript.net/02_program_structure.html#h_K5Yd6h3Axg), functions are – in essence – a collection of instructions that perform a specific task. For now, we will gain some practice executing pre-existing functions but next week we will also write our own functions. To execute a function in JavaScript, we write its name, followed by parentheses. Within the parenthesis, we can add value, or arguments, that will be given to the function and might be used for executing its task. You can see this at work when logging to the console.
+
+```js
+// function('some value')
+console.log('some value') // the console.log function will print 'some value' to the console
+```
+
+For now we will use the following functions:
+
+- `document.getElementById()` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
+- `document.createElementNS()` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElementNS)
+- `element.setAttribute()` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
+- `element.appendChild()` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
+
+We start by selecting our already existing `<svg>` element from within the DOM. This allows us to subsequently insert additional SVG elements as children of that SVG in the DOM tree. To make this a bit easier, I've added an `id` attribute to the SVG in the HTML code. These attributes [work the same way](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) as the `class` attribute with the difference that a specific `id` value can only be assigned to a single element (where the same class value can be assigned to many elements). We can use this `id` value (in this case, it is `chart`) to select our SVG from the DOM.
+
+```js
+let svg = document.getElementById('chart')
+```
+::: div callout
+Note that you can always inspect the value of any variable by logging it to the console. Add `console.log(svg)` to try it out.
+:::
+
+Our next step is to create a new `<g>` element. Because SVG elements are somewhat special, we cannot use the normal `document.createElement` function but rather need to use `document.createElementNS` so that we can instruct the browser this is going to be a SVG element.
+
+```js
+// the w3.org bit indicates that this will be a SVG element
+let itemGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g')
+```
+
+We can use the same function to create our first text element and subsequently set its attributes.
+
+```js
+// first text element
+let yearElement = document.createElementNS(
+  'http://www.w3.org/2000/svg',
+  'text'
+)
+yearElement.setAttribute('x', yearXPosition) // x position
+yearElement.setAttribute('y', yPosition) // y position
+yearElement.setAttribute('dominant-baseline', 'hanging')
+yearElement.textContent = yearLabel // the actual content of the text element
+itemGroup.appendChild(yearElement) // add <text> to <g> element
+```
+
+If you add the above code to your `index.js` file, you still do not see the actual text displayed on the page. How could that be? This is because the `itemGroup` node, which now holds our `<text>` with the year as a child, has been created but it has not been added to the DOM. In other words, we first need to add the `itemGroup` to the SVG element.
+
+```js
+svg.appendChild(itemGroup)
+```
+
+There it is!
+
+![console in csb](images/yearelement.png)
+
+Now, repeat the logic we have used so far to add in the remaining two text elements as well as the rectangle element for the actual bar.
+
+::: div callout
+We will do this section in class together.
+:::
+
+::: solution
+::: codesandbox sandboxes/week3_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
+:::
+
+:::
+
+### Iteratively creating SVG elements – JS Loops
+As you have now noticed, it is (almost) as much work to create the SVG elements in JS as it is to write the HTML yourself. Fret not – the real power of JS reveals itself once you apply the same JS code to create all the other items in the graph. To do this, we need a way to capture our entire dataset in a way that JS can understand (revisit [EJ Chapter 4](https://eloquentjavascript.net/04_data.html)).
+
+I have included the data below in tabular csv format. Can you think of the right way to represent this same data within JS?
+
+```markdown
+year,population,population_pixels
+1750,220000,17
+1760,310000,26
+1770,462000,38
+1780,562000,59
+1790,757208,80
+1800,1002037,106
+1810,1377808,132
+1820,1771656,162
+1830,2328642,194
+1840,2873648,223
+1850,3638808,255
+1860,4441830,278
+1870,4880009,311
+1880,6580793,359
+1890,7470040,407
+```
+
+For small datasets like this, it is often efficient to convert your data directly to a JavaScript object, or JSON, yourself. Sometimes the software you are working in can do this for you (e.g. Python and R can both write objects to JSON) but otherwise you can use a web service like [csvjson.com](https://www.csvjson.com/csv2json) to do the same.
+
+Once you have converted the data, include it in your js like so:
+
+```js
+let data = [
+    {
+    "year": 1750,
+    "population": 220000,
+    "population_pixels": 17
+    },
+    /// snip ///
+    {
+    "year": 1890,
+    "population": 7470040,
+    "population_pixels": 407
+    }
+]
+```
+
+To create a chart element for every item in our dataset we need to do the following two steps:
+
+1. Adapt our existing variables to calculate the y position of each element. The x position, thankfully, stays the same for every element.
+2. Use a `for()` [loop](https://eloquentjavascript.net/02_program_structure.html#h_oupMC+5FKN) to iterate over each item in our data array. You can create such a look like so:
+
+```js
+for (let index = 0; index < data.length; index++) {
+    // the index variable will increment by 1 for each iteration of the loop
+}
+```
+
+We can use the loop to create a `g` element and all the necessary child elements within and append to the `svg` parent for each item in our dataset. You will have to adapt the code for the single bar element we created in the previous section to now create one element in each iteration of the loop. You can use the below snippet as a starting point. Remember that you can use logging to the console to better understand what values are present in a variable on each iteration of the loop.
+
+```js
+for (let index = 0; index < data.length; index++) {
+  let item = data[index]
+  console.log(item)
+  let yPosition = yMarginTop + (index * yMarginBottom) // make sure you define yMarginTop and yMarginBottom previously in your code
+  console.log(yPosition)
+}
+```
+
+::: div callout
+We will do this section in class together.
+:::
+
+::: solution
+::: codesandbox sandboxes/week3_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
+:::
+
+:::
