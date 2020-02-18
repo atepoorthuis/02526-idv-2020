@@ -69,7 +69,7 @@ Instead of executing the JavaScript function in the console, we can also include
 :::
 
 ## Including JS in your HTML documents
-Just as we could include CSS in our HTML document, we can also include JS code within the same document. We do so by writing JS code in a `<script>` element ([MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)). We can include the `<script>` element either within the `<head>` or `<body>` of the document. For now, we will always include our JS in the body of the document, just before the end of the body element.
+Just as we could include CSS in our HTML document, we can also include JS code within our document. We do so by writing JS code in a `<script>` element ([MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)). We can include the `<script>` element either within the `<head>` or `<body>` of the document. For now, we will always include our JS in the body of the document, just before the end of the body element.
 
 ```html
 <body>
@@ -80,7 +80,7 @@ Just as we could include CSS in our HTML document, we can also include JS code w
 <body>
 ```
 
-Just like we have seen earlier with CSS, we can also refer to an external JS file. This can be hosted on a different server (such as Google's fonts) or within our own project folder. This can be quite handy to keep things organized and separated. We will adopt this practice here as well, and create a separate file called `index.js`. We can include and execute any code contained in this file by referring to it from our HTML file like so:
+Just like we have seen earlier with CSS, we can also refer to an external file that contains our JavaScript instructions. Such a file can be hosted on a different server (such as we saw with Google's fonts) or within our own project folder. This can be quite handy to keep things organized and separated. We will adopt this practice here as well, and create a separate file called `index.js`. We can include and execute any code contained in this file by referring to it from our HTML file like so:
 
 ```html
 <body>
@@ -90,9 +90,9 @@ Just like we have seen earlier with CSS, we can also refer to an external JS fil
 ```
 
 ## Rebuilding Our Du Bois Chart with JS
-In the next section, we will build our original Du Bois bar chart again, but now with JS instead of writing each element directly into the HTML document. In doing so, we will walk through the most important aspects of JavaScript as well. This highlights the essential concepts, which are covered in much more detail in the [Eloquent Javascript](https://eloquentjavascript.net/) (ES) textbook.
+In the next section, we will build our original Du Bois bar chart again, but now 'programmatically' with JS instead of writing each element directly into the HTML document. In doing so, we will use and apply important aspects of JavaScript as well. This will serve to highlight the most essential JS concepts, which are covered in much more detail in the [Eloquent Javascript](https://eloquentjavascript.net/) (ES) textbook.
 
-To provide a starting point, we will use the below sandbox. It contains the skeleton of our graph, with a single, commented-out bar element. In the next sections, we will first recreate the single bar element with JavaScript and then scale up to recreating all bar elements.
+To provide a starting point, we will use the below sandbox. It contains the skeleton of our graph, with a single, commented-out bar element. In the next sections, we will first recreate this single bar element with JavaScript and then scale up to recreating all bar elements.
 
 ::: codesandbox sandboxes/week3_stage_1 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
@@ -113,13 +113,13 @@ As stated, our first task is to recreate the following SVG bar element group wit
 </g>
 ```
 
-To do that, we will first start organizing the key 'ingredients' and store them in [JavaScript variables](https://eloquentjavascript.net/02_program_structure.html#h_lnOC+GBEtu) so we can more easily use and re-use them. The most important to note about creating variables in JS is that they are created by using the `let` keyword, followed by the variable name, then an equal `=` sign, and finally the value you'd like to assign or bind to that variable name.
+To do that, we will start organizing the key 'ingredients' and store them in [JavaScript variables](https://eloquentjavascript.net/02_program_structure.html#h_lnOC+GBEtu) so we can more easily use and re-use them. The most important to note about creating variables in JS is that they are created by using the `let` keyword, followed by the variable name, then an equal `=` sign, and finally the value you'd like to assign or bind to that variable name.
 
 ```js
 let variableName = 'value'
 ```
 
-To apply this to the task add hand, add the following to your `index.js` file.
+To apply this to the task at hand, add the following to your `index.js` file.
 
 ```js
 // label variables
@@ -128,7 +128,7 @@ let separatorLabel = '–'
 let populationLabel = '220,000'
 ```
 
-With this code, you create three variables but you don't see any results on the screen! To help us understand the 'content' of a variable, we can [log it to the console](https://eloquentjavascript.net/02_program_structure.html#h_6+Vb3XQoaa) with `console.log()`.
+With this code, you create three variables but you don't see any results on the screen! To help us understand the 'content' of a variable, we can also [log it to the console](https://eloquentjavascript.net/02_program_structure.html#h_6+Vb3XQoaa) with `console.log()`.
 
 ```js
 console.log(populationLabel) // check out the console 
@@ -138,7 +138,7 @@ You can find the console in your developer tools or, if using CodeSandBox, in th
 
 ![console in csb](images/console-log.png)
 
-Let's finish collecting all the essential bits of data into variables.
+Let's finish this process by collecting all the essential bits of data into individual variables.
 
 ```js
 // label position variables
@@ -165,7 +165,7 @@ Note that we use the `let` keyword here but could also have used `const` for the
 
 :::
 
-### Updating the DOM
+### Manipulating the DOM
 We have now collected all the essential ingredients for our bar element in variables. This makes us ready for the next step: actually drawing the bar element on the page. To achieve this we need to walk through a few key steps:
 
 1. Select the SVG element that already exists within the DOM.
@@ -174,7 +174,7 @@ We have now collected all the essential ingredients for our bar element in varia
 4. Create a single `<rect>` element with the right properties, and add them as another child to the `<g>` element.
 5. Add the `<g>` element to the SVG element.
 
-To do this, we will make use of a set of JS functions that help to manipulate the DOM. These are built-in functions available in any web document. As you can read in [EJ Chapter 2](https://eloquentjavascript.net/02_program_structure.html#h_K5Yd6h3Axg), functions are – in essence – a collection of instructions that perform a specific task. For now, we will gain some practice executing pre-existing functions but next week we will also write our own functions. To execute a function in JavaScript, we write its name, followed by parentheses. Within the parenthesis, we can add value, or arguments, that will be given to the function and might be used for executing its task. You can see this at work when logging to the console.
+To do this, we will make use of a set of JS functions that help to manipulate the DOM. These are built-in functions available in any web document. As you can read in [EJ Chapter 2](https://eloquentjavascript.net/02_program_structure.html#h_K5Yd6h3Axg), functions are – in essence – a collection of instructions that perform a specific task. For now, we will gain some practice executing pre-existing functions but next week we will also write our own functions. To execute a function in JavaScript, we write its name, followed by parentheses. Within the parentheses, we can add values, or arguments, that will be given to the function and might be used for executing its task. You can see this at work when logging to the console.
 
 ```js
 // function('some value')
@@ -188,7 +188,7 @@ For now we will use the following functions:
 - `element.setAttribute()` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)
 - `element.appendChild()` - [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild)
 
-We start by selecting our already existing `<svg>` element from within the DOM. This allows us to subsequently insert additional SVG elements as children of that SVG in the DOM tree. To make this a bit easier, I've added an `id` attribute to the SVG in the HTML code. These attributes [work the same way](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) as the `class` attribute with the difference that a specific `id` value can only be assigned to a single element (where the same class value can be assigned to many elements). We can use this `id` value (in this case, it is `chart`) to select our SVG from the DOM.
+We start by selecting our already existing `<svg>` element from within the DOM. This allows us to subsequently append additional SVG elements as children of that SVG in the DOM tree. To make this a bit easier, I've added an `id` attribute to the SVG in the HTML code (check out `index.html`). These attributes [work the same way](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) as the `class` attribute with the difference that a specific `id` value can only be assigned to a single element (whereas the same class value can be assigned to many elements). We can use this `id` value (in this case, it is `chart`) to select our SVG from the DOM.
 
 ```js
 let svg = document.getElementById('chart')
@@ -197,7 +197,7 @@ let svg = document.getElementById('chart')
 Note that you can always inspect the value of any variable by logging it to the console. Add `console.log(svg)` to try it out.
 :::
 
-Our next step is to create a new `<g>` element. Because SVG elements are somewhat special, we cannot use the normal `document.createElement` function but rather need to use `document.createElementNS` so that we can instruct the browser this is going to be a SVG element.
+Our next step is to create a new `<g>` element. Because SVG elements are somewhat special, we cannot use the normal `document.createElement` function that we used in the previous section to create a `<h2>` element. Rather we need to use `document.createElementNS` so that we can instruct the browser this is going to be a SVG element.
 
 ```js
 // the w3.org bit indicates that this will be a SVG element
@@ -216,10 +216,10 @@ yearElement.setAttribute('x', yearXPosition) // x position
 yearElement.setAttribute('y', yPosition) // y position
 yearElement.setAttribute('dominant-baseline', 'hanging')
 yearElement.textContent = yearLabel // the actual content of the text element
-itemGroup.appendChild(yearElement) // add <text> to <g> element
+itemGroup.appendChild(yearElement) // append <text> element as child to <g> element
 ```
 
-If you add the above code to your `index.js` file, you still do not see the actual text displayed on the page. How could that be? This is because the `itemGroup` node, which now holds our `<text>` with the year as a child, has been created but it has not been added to the DOM. In other words, we first need to add the `itemGroup` to the SVG element.
+If you add the above code to your `index.js` file, you still do not see the actual text displayed on the page. How could that be? This is because the `itemGroup` node, which now holds our `<text>` label, has been created but it has not been added to the DOM. In other words, we first need to add the `itemGroup` to the SVG element.
 
 ```js
 svg.appendChild(itemGroup)
@@ -265,9 +265,9 @@ year,population,population_pixels
 1890,7470040,407
 ```
 
-For small datasets like this, it is often efficient to convert your data directly to a JavaScript object, or JSON, yourself. Sometimes the software you are working in can do this for you (e.g. Python and R can both write objects to JSON) but otherwise you can use a web service like [csvjson.com](https://www.csvjson.com/csv2json) to do the same.
+For small datasets like this, it is often efficient to convert your data directly to a JavaScript object, or JSON, yourself. Sometimes the software you are working in can do this for you (e.g. Python and R can both write objects to JSON) but you can also use a web service like [csvjson.com](https://www.csvjson.com/csv2json) to do the same in a pinch.
 
-Once you have converted the data, include it in your js like so:
+Try converting the tabular data into JSON using the `csvjson.com` web service. Once you have converted the data, include it in your js like so:
 
 ```js
 let data = [
@@ -285,18 +285,21 @@ let data = [
 ]
 ```
 
-To create a chart element for every item in our dataset we need to do the following two steps:
+With our data in place, we can create a chart element *for every item* in our dataset. We will have to implement the following additional two steps:
 
-1. Adapt our existing variables to calculate the y position of each element. The x position, thankfully, stays the same for every element.
-2. Use a `for()` [loop](https://eloquentjavascript.net/02_program_structure.html#h_oupMC+5FKN) to iterate over each item in our data array. You can create such a look like so:
+1. Adapt our existing variables to calculate the y position of each element. The x position, thankfully, stays the same for every element. Previously, our y position was fixed at `15`. Now we need to recalculate the y position for each element with an appropriate offset. In other words, we need to encode into two variables both a starting position, as well as a specific 'margin' between elements.
+2. Use a `for()` [loop](https://eloquentjavascript.net/02_program_structure.html#h_oupMC+5FKN) to iterate over each item in our data array. You can create such a loop like so:
 
 ```js
 for (let index = 0; index < data.length; index++) {
+    // this will execute a loop that starts at 0
     // the index variable will increment by 1 for each iteration of the loop
+    // this will keep iterating until the index variable is longer smaller than the total number of items in the data variable
+    // in other words, the 'end' of the dataset has been reached
 }
 ```
 
-We can use the loop to create a `g` element and all the necessary child elements within and append to the `svg` parent for each item in our dataset. You will have to adapt the code for the single bar element we created in the previous section to now create one element in each iteration of the loop. You can use the below snippet as a starting point. Remember that you can use logging to the console to better understand what values are present in a variable on each iteration of the loop.
+We can use the loop to create a `g` element and all the necessary child elements within, and then append this group element to the `svg` parent. The loop will help do this for each item in our dataset. You will have to adapt the code for the single bar element we created in the previous section to now create one element in each iteration of the loop. You can use the below snippet as a starting point. Remember that you can use logging to the console to better understand what values are present in a variable on each iteration of the loop.
 
 ```js
 for (let index = 0; index < data.length; index++) {
