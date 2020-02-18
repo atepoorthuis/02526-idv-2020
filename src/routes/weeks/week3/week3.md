@@ -157,7 +157,7 @@ let barWidth
 We will do this section in class together.
 :::
 
-::: solution
+::: solution show
 Note that we use the `let` keyword here but could also have used `const` for these values as they are constant and will not change. You can read more about the difference in [EJ Chapter 2](https://eloquentjavascript.net/02_program_structure.html#p_ReUkO4pLEi). For simplicity, we use `let` exclusively here.
 
 ::: codesandbox sandboxes/week3_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
@@ -235,7 +235,7 @@ Now, repeat the logic we have used so far to add in the remaining two text eleme
 We will do this section in class together.
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week3_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
 
