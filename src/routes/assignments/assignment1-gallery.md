@@ -32,7 +32,7 @@ You will find a gallery of all Assignment 1 submissions here. The submissions ar
 ## Conjugal condition.
 <div class="grid grid-cols-4 gap-2">
     <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33800/33872r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2013650429/" caption="Original" />
-    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/26361190/74438702-b5823080-4ea5-11ea-9df1-c42e76736ada.png" linkURL="https://9oq2d.csb.app/" caption="Reproduction by adriantanjm" />
+    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/26361190/74746911-15f7e000-52a1-11ea-9199-7688105578f9.png" linkURL="https://codesandbox.io/s/idv-blk1assignment-adriantan-9oq2d" caption="Reproduction by adriantanjm" />
 </div>
 
 ## Crime among American Negroes.
