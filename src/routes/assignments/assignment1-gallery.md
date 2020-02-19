@@ -16,7 +16,7 @@ You will find a gallery of all Assignment 1 submissions here. The submissions ar
 ## 'Pauperism among American Negros.'
 <div class="grid grid-cols-3 gap-2">
     <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33900/33920r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2014645375/" caption="Original" />
-    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/1752727/74800689-38284700-530f-11ea-868f-f69fa0836d2a.png" caption="Repro by angiewny " />
+    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/1752727/74800689-38284700-530f-11ea-868f-f69fa0836d2a.png" linkURL="https://codesandbox.io/s/idv-blk1assignment-angiewong-m7g7u" caption="Repro by angiewny " />
 </div>
 
 ## 'Race amalgamation in Georgia based on a study of 40,000 individuals of Negro descent.'
