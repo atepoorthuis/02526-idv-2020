@@ -6,7 +6,7 @@ export let caption = undefined
 
 <style>
     img {
-        max-height: 250px;
+        max-height: 275px;
     }
 </style>
 

@@ -154,3 +154,13 @@ In this case, we apply a *margin* to the right of the plate title of 10px. But w
 :::
 
 :::
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- When & how to assign classes to HTML elements.
+- Applying CSS styling to HTML elements, either through the inclusion of a `<style>` element or a separate `.css` file that you fetch through something like `<link href="style.css" rel="stylesheet" />`.
+- When & how to 'select' HTML elements, using both type and class selectors, in CSS.
+- When & how to use CSS declarations.
+- The potential difference between CSS properties for HTML and SVG elements (e.g. `color` versus `fill` and `stroke`).
+- When & how to use web fonts.
+- Use MDN to search the CSS documentation and adopt new CSS properties and their values to achieve a certain style.
