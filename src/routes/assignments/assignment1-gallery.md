@@ -5,18 +5,16 @@ You will find a gallery of all Assignment 1 submissions here. The submissions ar
     // use small Svelte component to make creating linked image gallery a bit easier
     import ImageWithLinkAndCaption from '../../components/ImageWithLinkAndCaption.svelte'
 ```
+## City and rural population. 1890.
+<div class="grid grid-cols-4 gap-2">
+    <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33800/33873r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2013650430/" caption="Original" />
+    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/33455297/74146513-3211d680-4c3c-11ea-8e1a-2c66baf76032.png" linkURL="https://codesandbox.io/s/idv-boilerplate-fs6p0" caption="Repro by 5v1n0" />
+</div>
 
 ## Pauperism among American Negros
 <div class="grid grid-cols-4 gap-2">
-    <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33800/33873r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2013650430/" caption="Original" />
+    <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33900/33920r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2014645375/" caption="Original" />
     <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/60475742/74409558-f19b9e00-4e71-11ea-8bc3-eef64bcdd9f7.PNG" linkURL="https://codesandbox.io/s/idv-blk1assignment-angiewong-m7g7u" caption="Repro by angiewny " />
-</div>
-
-## Ocuupations of Negroes and whites in Georgia
-<div class="grid grid-cols-4 gap-2">
-    <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33800/33873r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2013650430/" caption="Original" />
-    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/46587513/74661737-80424f00-51d3-11ea-9133-a0f36c723b52.PNG" linkURL="https://codesandbox.io/embed/idv-boilerplate-hgkpq?fontsize=14&hidenavigation=1&theme=dark" caption="Repro by siddharthl93" />
-    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/37584702/74583661-35261180-5004-11ea-877b-3932a66da775.png" linkURL="https://codesandbox.io/s/week1-stage-1-n0b70" caption="Repro by teoyangrui " />
 </div>
 
 ## Race amalgamation in Georgia based on a study of 40,000 individuals of Negro descent.
@@ -35,6 +33,8 @@ You will find a gallery of all Assignment 1 submissions here. The submissions ar
 <div class="grid grid-cols-4 gap-2">
     <ImageWithLinkAndCaption imageURL="https://cdn.loc.gov/service/pnp/ppmsca/33800/33889r.jpg" linkURL="https://www.loc.gov/pictures/collection/anedub/item/2005676812/" caption="Original" />
     <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/60461793/74545687-47f90180-4f84-11ea-8e2c-1cd34d152116.png" linkURL="https://codesandbox.io/s/assignment-1-b7zy9" caption="Repro by anirudhgovind" />
+    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/46587513/74661737-80424f00-51d3-11ea-9133-a0f36c723b52.PNG" linkURL="https://codesandbox.io/embed/idv-boilerplate-hgkpq?fontsize=14&hidenavigation=1&theme=dark" caption="Repro by siddharthl93" />
+    <ImageWithLinkAndCaption imageURL="https://user-images.githubusercontent.com/37584702/74583661-35261180-5004-11ea-877b-3932a66da775.png" linkURL="https://codesandbox.io/s/week1-stage-1-n0b70" caption="Repro by teoyangrui " />
 </div>
 
 ## Conjugal condition.
