@@ -1,6 +1,8 @@
 # Assignment 1 Submissions
 You will find a gallery of all Assignment 1 submissions here. The submissions are categorized by the original Du Bois plate they are reproducing. Each submission is displayed using a screenshot, clicking on the screenshot will bring you to the CodeSandbox where you can inspect the code behind each submission.
 
+**N.B.** The goal of this assignment is to create a faithful reproduction of Du Bois' original work. This includes the use of the word 'negro' by Du Bois to refer to African Americans. The term was in common and conventional use by African Americans around the turn of the 19th century, but is now considered inappropriate or inoffensive. It is used here only in this specific historical context and in direct quotes or titles from Du Bois' work.
+
 ```js exec
     // use small Svelte component to make creating linked image gallery a bit easier
     import ImageWithLinkAndCaption from '../../components/ImageWithLinkAndCaption.svelte'
