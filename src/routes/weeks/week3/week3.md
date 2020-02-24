@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 3: Javascript Fundamentals I
 
@@ -315,6 +315,10 @@ We will do this section in class together.
 :::
 
 ::: solution
+You will find the solution in the below sandbox. If you are not entirely sure how to use the for-loop to construct chart elements iteratively, please (re)watch the following code-through.
+
+<iframe title="IDV Week 3 Loops" width="560" height="315" src="https://www.youtube-nocookie.com/embed/2p3pVdNSkE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ::: codesandbox sandboxes/week3_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
 
