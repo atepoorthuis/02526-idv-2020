@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 3: Javascript Fundamentals I
 
@@ -315,7 +315,20 @@ We will do this section in class together.
 :::
 
 ::: solution
+You will find the solution in the below sandbox. If you are not entirely sure how to use the for-loop to construct chart elements iteratively, please (re)watch the following code-through.
+
+<iframe title="IDV Week 3 Loops" width="560" height="315" src="https://www.youtube-nocookie.com/embed/2p3pVdNSkE8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ::: codesandbox sandboxes/week3_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
 
 :::
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- How to include JavaScript code within your HTML document.
+- How to use JS functions to manipulate the DOM: creating new elements, setting their attributes, selecting existing DOM elements, and inserting new elements into the DOM.
+- Creating variables in JS.
+- Use of `console.log` to print values and variables to the JS Console.
+- Using arrays and objects to represent more complex data structures (e.g. tables) in JS.
+- Using a for-loop to iterate over a data structure and execute a series of commands for each iteration.
