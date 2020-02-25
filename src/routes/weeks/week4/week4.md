@@ -4,10 +4,10 @@ solution: false
 # Week 4: Javascript Fundamentals II
 
 ## Introduction
-In the previous week, we have covered all the essential JavaScript concepts needed to recreate our original Du Bois chart. In this week, we will add two additional concepts that will help make working with JS easier, and more fun! First, we are going to create our own functions to help us structure our code a bit better. Second, we will get acquainted with 'events', which provide the way for us to add interactive elements to web pages. Finally, in the latter half of this week, we will switch from our familiar CodeSandbox playground to a full-fledged development environment installed on your own computer.
+In the previous week, we have covered all the essential JavaScript concepts needed to recreate our original Du Bois chart. In this week, we will add two additional concepts that will help make working with JS easier, and more fun! First, we are going to create our own functions to help us structure our code a bit better. Second, we will get acquainted with 'events', which provide the way for us to add interactive elements to web pages. Finally, in the latter half of this week, we will switch from our familiar CodeSandbox playground to a full-fledged development environment installed locally on your own computer.
 
 ## Refactoring code with functions
-So far, you have *used* functions but you have not yet created your own functions. Just as creating your own variables helps you structure your code (e.g. by giving semantic names), creating your own functions helps with this too. In addition, they also can help simplify procedures you need to do often.
+So far, you have *used* functions but you have not yet created your own functions. Just as creating your own variables helps you structure your code (e.g. by giving semantic names), creating your own functions helps with this too. In addition, they also can help simplify procedures you need to execute often.
 
 In the case of last week's chart, we created three separate text elements within each iteration of our loop:
 ```js
@@ -57,9 +57,9 @@ for (let index = 0; index < data.length; index++) {
   svg.appendChild(itemGroup)
 }
 ```
-Doing so line-by-line creates a lot of extra code. This doesn't help the readability of our code at all. What's more we can't really tell what each block of code is actually trying to achieve. Let's try to address that by *refactoring* our code using a function that will create a text element with the right properties for us. Refactoring is just a fancy way of saying restructuring a piece of code (often to increase legibility, or speed, or something else altogether) without altering its ultimate effect. That's what we want to do to! We don't want to change the appearance of the graphic - just simplify the code that generates it. 
+Doing so line-by-line creates a lot of extra code – that's quite the wall of text! This doesn't help the readability of our code at all. What's more, we can't really tell what each block of code is actually trying to achieve without walking through it in detail. We will address this by *refactoring* our code to create and use a function that will create a text element with all of the right properties in a single go. Refactoring is just a fancy way of saying restructuring a piece of code (often to increase legibility, or speed) without altering its ultimate effect. And that's exactly what we want to do to! We don't want to change the appearance of the graphic - just simplify the code that generates it. 
 
-We will create a new function to do so. Please review [EJ Chapter 3](https://eloquentjavascript.net/03_functions.html) for the details on how to specify a function. Take the following function as a starting point.
+We will start by creating an entirely new function of our own. Please review [EJ Chapter 3](https://eloquentjavascript.net/03_functions.html) for the details on how to declare and execute functions. You can take the following function as a starting point.
 
 ```js
 function createTextElement(argument1, argument2) {
@@ -92,9 +92,9 @@ We will do this section in class together.
 :::
 
 ## JavaScript Events
-As we learn from [Eloquent Javascript Chapter 15](https://eloquentjavascript.net/15_event.html), Javascript allows us to respond to different kinds of user input through event handlers. This is very useful for interactive data visualization. After all, we would ultimately like to enable users to *interact* with our visualization, especially because this often very helpful in achieving various *tasks* (cf. VAD Chapter 3).
+As we learn from [Eloquent Javascript Chapter 15](https://eloquentjavascript.net/15_event.html), Javascript allows us to respond to different kinds of user input through 'event handlers'. This is very useful for interactive data visualization. After all, we would ultimately like to enable users to *interact* with our visualization, especially because this often very helpful in achieving various *tasks* (cf. VAD Chapter 3).
 
-We can 'bind' event handlers to specific DOM elements, for specific events. When we define an event listener, we can also specify what specific function we would like to execute when an event is registered or 'fired'. To do this, we will make heavy use of the `addEventListener` function ([MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)) that's built-in JS. This function takes two arguments: the name of the specific event it should listen for, and the function it executes when the event is fired.
+We can 'bind' event handlers to specific DOM elements, for specific events. When we define such an event handler or listener, we can also specify what specific function we would like to execute when an event is registered or 'fired'. To do this, we will make heavy use of the `addEventListener` function ([MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)), which is built into JS in the browser. This function takes two arguments: the name of the specific event it should listen for, and the function it executes when the event is fired. For example, to listen to a 'click' on our bar chart rectangle, we can do the following:
 
 ```js
 let barElement = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
@@ -103,12 +103,12 @@ barElement.addEventListener("click", function () {
 })
 ```
 
-Within our loop, let's try to add a `click` event to each rectangle of our bar chart. Upon click, `console.log` the 'population' variable for the corresponding rectangle to the console.
+Within our for-loop, let's try to add this `click` event to each rectangle of our bar chart. Upon click, `console.log` the 'population' variable for the corresponding rectangle to the console.
 
-As we can read in EJ Chapter 15, there are many more events apart from the simple click. We can react to key presses, touch events, and other mouse events. We will experiment a bit more with event listeners by trying to make the bars *change color* when the user hovers over the bar. Some things to keep in mind:
+As we can read in EJ Chapter 15, there are many more events available in addition to our simple click. We can react to key presses, touch events, and other mouse events. We will experiment a bit more with event listeners by trying to make the bars *change color* when the user hovers over the bar. Some things to keep in mind:
 
 - You will need to change the color from within the function that is called by the eventListener. Seeing as we set the default colour of each rectangle in our CSS previously, what do you think is the best way to do this?
-- You'll soon realize you need to make use of **two** separate event listeners per element. Use MDN's [Event documentation](https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events) to find out what the second event listener would be.
+- You'll soon realize you need to make use of **two** separate event listeners for each element. Use MDN's [Event documentation](https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_events) to find out what the second event listener would be.
 
 ::: div callout
 We will do this section in class together.
@@ -124,12 +124,12 @@ We will do this section in class together.
 Replace the original caption text with a static text that says `Hover over each rectangle to find out more...`. Then implement a function that gets executed upon hovering over the bar elements and changes the caption to the following text:
 
 ```
-In [year] there were [population in year] African-Americans in the United States of America. This constitutes a [% increase compared with previous decade]% compared with the population 10 years earlier; and a [% increase compared with 1760]% increase compared with the population of African-Americans in 1750.
+In [year] there were [population in year] African-Americans in the United States of America. This constitutes a [% increase compared with previous decade]% compared with the population 10 years earlier; and a [% increase compared with 1750]% increase compared with the population of African-Americans in 1750.
 ```
 
-Note you will need to use string *concatenation* to construct this text – refer back to [EJ Chapter 1](https://eloquentjavascript.net/01_values.html#p_+y5+JTiKgR) for a refresher. When the mouse leaves the rectangle, the text should be replaced with the default text again.
+Note you will need to use string *concatenation* to construct this text – refer back to [EJ Chapter 1](https://eloquentjavascript.net/01_values.html#p_+y5+JTiKgR) for a refresher. When the mouse leaves the rectangle, make sure the text gets replaced with the default text again.
 
-## Setting up your own development environment
+## Setting up your own development environment [for Thursday]
 So far we have used the online platform CodeSandbox to create our HTML, CSS and JS documents. This is useful if we're just getting started but for larger projects it is often more convenient to rely on a web development environment that is set up on your local machine. To do this effectively, we need to install a few things, in this order:
 
 - [Node.js](https://nodejs.org/en/)
