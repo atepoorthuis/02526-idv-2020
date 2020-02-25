@@ -323,3 +323,12 @@ You will find the solution in the below sandbox. If you are not entirely sure ho
 :::
 
 :::
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- How to include JavaScript code within your HTML document.
+- How to use JS functions to manipulate the DOM: creating new elements, setting their attributes, selecting existing DOM elements, and inserting new elements into the DOM.
+- Creating variables in JS.
+- Use of `console.log` to print values and variables to the JS Console.
+- Using arrays and objects to represent more complex data structures (e.g. tables) in JS.
+- Using a for-loop to iterate over a data structure and execute a series of commands for each iteration.
