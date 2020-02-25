@@ -124,7 +124,9 @@ We will do this section in class together.
 Replace the original caption text with a static text that says `Hover over each rectangle to find out more...`. Then implement a function that gets executed upon hovering over the bar elements and changes the caption to the following text:
 
 ```
-In [year] there were [population in year] African-Americans in the United States of America. This constitutes a [% increase compared with previous decade]% compared with the population 10 years earlier; and a [% increase compared with 1750]% increase compared with the population of African-Americans in 1750.
+In [year] there were [population in year] African-Americans in the United States of America.
+This constitutes a [% increase compared with previous decade]% compared with the population 10 years earlier;
+and a [% increase compared with 1750]% increase compared with the population of African-Americans in 1750.
 ```
 
 Note you will need to use string *concatenation* to construct this text – refer back to [EJ Chapter 1](https://eloquentjavascript.net/01_values.html#p_+y5+JTiKgR) for a refresher. When the mouse leaves the rectangle, make sure the text gets replaced with the default text again.
