@@ -10,7 +10,7 @@ For your second assignment, you should recreate your graph from the first assign
 - If your original graph does not work so well for this assignment, feel free to pick a different one.
 
 
-You can use the boilerplate CodeSandbox below as a starting point or use the CodeSandbox from your previous assignment. Regardless, you will have to add both Assignment 1 and the current assignment to the appropriate directory in your Github repository. Once you are finished with your work, create a new issue, title it 'Assignment 2 by [your_name]'. In the body of the issue, include at least a link to the last commit you made as part of your assignment, ‘at’ the teaching team (include @teaching in your text), and include a screenshot of your chart. To link to a specific commit, you can just include the SHA (a short code uniquely identifying a commit) in your issue. You can find the SHA codes in the history of your commits (e.g. at https://github.com/02526-idv/02526-idv-2020/commits/master my first commit has SHA '309a93b').
+You can use the boilerplate CodeSandbox below as a starting point or use the CodeSandbox from your previous assignment. Once you are finished, navigate to your own Github repository at https://github.com/02526-idv/[your-name]. Create a new issue, title it 'Assignment 2 by [your_name]', and include both a screenshot of the final result as well as a link to the CodeSandbox that belongs to Assignment 2.
 
 ::: codesandbox sandboxes/boilerplate_assignment2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light
 :::
