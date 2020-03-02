@@ -26,6 +26,7 @@ a {
 		<li><a href='/weeks/week3/week3'>Week 3: JS Fundamentals I</a></li>
 		<li><a href='/weeks/week4/week4'>Week 4: JS Fundamentals II</a></li>
 		<li><a href='/assignments/assignment2'>Assignment 2</a></li>
+		<li><a href='/weeks/week5/week5'>Week 5: Declarative & Reactive Programming I</a></li>
 	</ul>
 
 </nav>
