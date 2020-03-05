@@ -49,7 +49,7 @@ Let's put this in practice by replacing the 'static' values in our sandbox code 
 We will do this section in class together.
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week5_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
 :::
 
