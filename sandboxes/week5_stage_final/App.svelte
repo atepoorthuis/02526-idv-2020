@@ -1,5 +1,5 @@
 <script>
-  const data = [
+  let data = [
     {
       year: 1750,
       population: 220000,
@@ -78,15 +78,15 @@
   ]
 
   // label position variables
-  const yMarginTop = 18
-  const yMarginBottom = 40
-  const yearXPosition = 22.5
-  const separatorXPosition = 70
-  const populationXPosition = 153
+  let yMarginTop = 18
+  let yMarginBottom = 40
+  let yearXPosition = 22.5
+  let separatorXPosition = 70
+  let populationXPosition = 153
 
   // bar variables
-  const barXPosition = 165
-  const barHeight = 11
+  let barXPosition = 165
+  let barHeight = 11
 
   function yPos (index) {
     return yMarginTop + index * yMarginBottom

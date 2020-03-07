@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 5: Declarative & Reactive Programming I (Introduction to Svelte)
 
@@ -76,16 +76,16 @@ Will create the following HTML:
 <p>coke</p>
 <p>milo</p>
 ```
-You can try this out for yourself on the Svelte's neat website – it contains [a simple sandbox utility where I've copied the above example](https://svelte.dev/repl/9ac0ce053c144b6f94ce716e4b800fd8?version=3.19.1).
+You can try this out for yourself on the Svelte's neat website – it contains [a simple sandbox utility where I've copied the above example](https://svelte.dev/repl/9ac0ce053c144b6f94ce716e4b800fd8?version=3.19.1). Try to add another drink to the `items` array to get a sense of what happens to the rendered HTML on the right. Or adjust the inside of the `{#each}...{/each}` block to include an extra `<p>` element for each drink.
 
-Our objective is to use the `each` block to loop through each element in our dataset (copy over the `let data` statement from our previous week) and create the appropriate `<g>`, `<text>` and `<rect>` elements in each iteration.
+Our objective is to use the `each` block to loop through each element in our dataset (tip: copy over the `let data` statement from our previous week) and create the appropriate `<g>`, `<text>` and `<rect>` elements in each iteration.
 
 ::: div callout
 We will do this section in class together.
 :::
 
 ::: solution
-We are using `{#each data as item, i}` to loop over all 'rows' in the `data` variable. Within the loop, we will have access to a `item` variable that contains the corresponding object for that element or 'row' of our `data` as well as a `i` variable that is simply the current index of the iteration. This is an optional, second argument for Svelte's each blocks. In this case it comes in handy because we want to use the index to calculate the correct `y` position of each element!
+We are using `{#each data as item, i}` to loop over all 'rows' in the `data` variable. Within the loop, we will have access to a `item` variable that contains the corresponding object for that element or 'row' of our `data`, as well as a `i` or index variable that is simply the current index of the iteration. This is an optional, second argument for Svelte's each blocks (reminder, check out [the docs](https://svelte.dev/docs#each) to read more about potential functionality of each new technique we use). In this case it comes in handy because we want to use the index to calculate the correct `y` position of each element!
 
 Instead of typing `y={yMarginTop + i * yMarginBottom}` for each element, we use a convenience function `yPos` (see line 91 for each declaration) so we can simply type  `y={yPos(i)}`.
 
