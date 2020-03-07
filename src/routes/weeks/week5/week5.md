@@ -93,3 +93,10 @@ Instead of typing `y={yMarginTop + i * yMarginBottom}` for each element, we use 
 :::
 
 :::
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- Understand the difference between the imperative approach to changing the DOM (vanilla JS) and the declarative approach of front-end frameworks like Svelte
+- Understand the single-file component approach and basic anatomy of a Svelte file.
+- Use Svelte's template syntax curly braces `{ }` to include JS variables and expressions in your HTML markup
+- Use Svelte's template syntax `{#each}` block to iterate over a dataset (array) and create specific HTML markup for each element within the dataset.
