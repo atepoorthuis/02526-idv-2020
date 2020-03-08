@@ -4,7 +4,9 @@ solution: true
 # Week 6: Declarative Programming II (Svelte cont'd + D3)
 
 ## Introduction
-In the previous block, we have started to get familiar with Svelte's approach to writing declarative 'components' that allow us to combine HTML and JS in more convenient ways than the imperative approach we used in Week 3 & 4. So far, we have been able to re-create Du Bois original chart by utilizing Svelte's template syntax and the `each` block. In this week, we will cover the remaining essentials of Svelte's template syntax by adding event handlers (the Svelte way) to our chart. We will also introduce the use and importing of other JavaScript libraries – specifically by replacing our original 'pixel' measurement for population by a scaled version of the raw population number. We will do this by utilizing part of the [d3.js ecosystem](https://d3js.org/). Finally, we will try and 'abstract' a part of our chart into a reusable component. This is way to make Svelte code more modular and structured – similar to how we used our own functions to structure and refactor JS code.
+In the previous block, we have started to get familiar with Svelte's approach to writing declarative 'components' that allow us to combine HTML and JS in more convenient ways than the imperative approach we used in Week 3 & 4. So far, we have been able to re-create Du Bois original chart by utilizing Svelte's template syntax and the `each` block.
+
+In this week, we will cover the remaining essentials of Svelte's template syntax by adding event handlers (the Svelte way) to our chart. We will also introduce the use and importing of other JavaScript libraries – specifically by replacing our original 'pixel' measurement for population by a scaled version of the raw population number. We will do this by utilizing part of the [d3.js ecosystem](https://d3js.org/). Finally, we will try and 'abstract' a part of our chart into a reusable component. This is a way to make Svelte code more modular and structured – similar to how we used our own functions to structure and refactor JS code.
 
 ## Template Syntax: Event Handlers
 In Week 4, we used the JS function `addEventListener` to add listeners for specific mouse interactions to specific HTML elements. Svelte provides a more convenient way to do this with its template syntax. We can use the [on:eventname directive](https://svelte.dev/docs#on_element_event) to achieve the same result. To place an event handler on, say, a `<rect>` element in an SVG, we can use the following syntax.
@@ -30,6 +32,7 @@ Let's use Svelte's template syntax to get a better feel for how we can build use
 
 ::: div callout
 We will do this section in class together.
+<iframe title="IDV Week 6 Event Handlers" width="560" height="315" src="https://www.youtube-nocookie.com/embed/D70voO7_QqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
@@ -62,6 +65,7 @@ We can utilize the if block to switch between the 'Hover over' placeholder and t
 
 ::: div callout
 We will do this section in class together.
+<iframe title="IDV Week 6 If Blocks" width="560" height="315" src="https://www.youtube-nocookie.com/embed/IFT0T1dHRR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
@@ -88,6 +92,7 @@ Will log the value of `activeIndex` whenever the variable binding has been updat
 
 ::: div callout
 We will do this section in class together.
+<iframe title="IDV Week 6 Reactive Statements" width="560" height="315" src="https://www.youtube-nocookie.com/embed/SBJIb887tQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
@@ -127,6 +132,7 @@ Now that we have scaling function, we can use to draw the width of the `<rect>` 
 
 ::: div callout
 We will do this section in class together.
+<iframe title="IDV Week 6 Importing Libraries & D3 Scales" width="560" height="315" src="https://www.youtube-nocookie.com/embed/b5PMeSlTE3I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
