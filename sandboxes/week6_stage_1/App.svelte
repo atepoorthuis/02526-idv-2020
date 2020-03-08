@@ -1,5 +1,5 @@
 <script>
-  let data = [
+  const data = [
     {
       year: 1750,
       population: 220000,
@@ -78,18 +78,27 @@
   ]
 
   // label position variables
-  let yMarginTop = 18
-  let yMarginBottom = 40
-  let yearXPosition = 22.5
-  let separatorXPosition = 70
-  let populationXPosition = 153
+  const yMarginTop = 18
+  const yMarginBottom = 40
+  const yearXPosition = 22.5
+  const separatorXPosition = 70
+  const populationXPosition = 153
 
   // bar variables
-  let barXPosition = 165
-  let barHeight = 11
+  const barXPosition = 165
+  const barHeight = 11
 
   function yPos (index) {
     return yMarginTop + index * yMarginBottom
+  }
+
+  function respondToClick (index) {
+    let message = 'In '
+    message += data[index].year
+    message += ' there were '
+    message += data[index].population
+    message += ' African-Americans in the US'
+    console.log(message)
   }
 </script>
 
@@ -115,7 +124,7 @@
           <text class="graph-text" x={populationXPosition} y={yPos(i)} dy={10} text-anchor="end">
             {item.population}
           </text>
-          <rect class="bar" x={barXPosition} y={yPos(i)} height={barHeight} width={item.population_pixels} />
+          <rect on:click={() => respondToClick(i)} class="bar" x={barXPosition} y={yPos(i)} height={barHeight} width={item.population_pixels} />
         </g>
       {/each}
       </svg>

@@ -1,7 +1,7 @@
 ---
-solution: false
+solution: true
 ---
-# Week 5: Declarative & Reactive Programming I (Introduction to Svelte)
+# Week 5: Declarative Programming I (Introduction to Svelte)
 
 ## Introduction
 In the previous block, we have started to get familiar with using JavaScript to construct our visualizations in a more programmatic way. Although JavaScript comes with a lot of potential, we have also seen that it can create quite a bit of mental overhead when using it to create our visualization! One of the main drawbacks of the approach we have used so far is that we had to deal with different 'domains' or 'registers' in which our visualization is created. In its simplest form, the Document Object Model (DOM) is written down in HTML (Week 1 & 2) but once we add in JavaScript, the DOM can be expressed and manipulated from both HTML and JS! As we have seen, with JavaScript we have to 'reach' into the existing DOM, extract some elements, manipulate them and then, ultimately, put the results back. Meanwhile, we have to keep a mental picture of the DOM in our head because unlike HTML, JS doesn't really tell us how the DOM might look like at that point in time. That's a lot to keep track off – especially once we graduate from our relatively simple, static charts.
@@ -76,16 +76,16 @@ Will create the following HTML:
 <p>coke</p>
 <p>milo</p>
 ```
-You can try this out for yourself on the Svelte's neat website – it contains [a simple sandbox utility where I've copied the above example](https://svelte.dev/repl/9ac0ce053c144b6f94ce716e4b800fd8?version=3.19.1).
+You can try this out for yourself on the Svelte's neat website – it contains [a simple sandbox utility where I've copied the above example](https://svelte.dev/repl/9ac0ce053c144b6f94ce716e4b800fd8?version=3.19.1). Try to add another drink to the `items` array to get a sense of what happens to the rendered HTML on the right. Or adjust the inside of the `{#each}...{/each}` block to include an extra `<p>` element for each drink.
 
-Our objective is to use the `each` block to loop through each element in our dataset (copy over the `let data` statement from our previous week) and create the appropriate `<g>`, `<text>` and `<rect>` elements in each iteration.
+Our objective is to use the `each` block to loop through each element in our dataset (tip: copy over the `let data` statement from our previous week) and create the appropriate `<g>`, `<text>` and `<rect>` elements in each iteration.
 
 ::: div callout
 We will do this section in class together.
 :::
 
 ::: solution
-We are using `{#each data as item, i}` to loop over all 'rows' in the `data` variable. Within the loop, we will have access to a `item` variable that contains the corresponding object for that element or 'row' of our `data` as well as a `i` variable that is simply the current index of the iteration. This is an optional, second argument for Svelte's each blocks. In this case it comes in handy because we want to use the index to calculate the correct `y` position of each element!
+We are using `{#each data as item, i}` to loop over all 'rows' in the `data` variable. Within the loop, we will have access to a `item` variable that contains the corresponding object for that element or 'row' of our `data`, as well as a `i` or index variable that is simply the current index of the iteration. This is an optional, second argument for Svelte's each blocks (reminder, check out [the docs](https://svelte.dev/docs#each) to read more about potential functionality of each new technique we use). In this case it comes in handy because we want to use the index to calculate the correct `y` position of each element!
 
 Instead of typing `y={yMarginTop + i * yMarginBottom}` for each element, we use a convenience function `yPos` (see line 91 for each declaration) so we can simply type  `y={yPos(i)}`.
 
@@ -93,3 +93,10 @@ Instead of typing `y={yMarginTop + i * yMarginBottom}` for each element, we use 
 :::
 
 :::
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- Understand the difference between the imperative approach to changing the DOM (vanilla JS) and the declarative approach of front-end frameworks like Svelte
+- Understand the single-file component approach and basic anatomy of a Svelte file.
+- Use Svelte's template syntax curly braces `{ }` to include JS variables and expressions in your HTML markup
+- Use Svelte's template syntax `{#each}` block to iterate over a dataset (array) and create specific HTML markup for each element within the dataset.

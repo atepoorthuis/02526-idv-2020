@@ -1,5 +1,5 @@
 {
-  "name": "week5-stage-final",
+  "name": "idv-boilerplate",
   "version": "1.0.0",
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
@@ -10,6 +10,7 @@
     "rollup-plugin-terser": "^5.1.2"
   },
   "dependencies": {
+    "d3-scale": "3.2.1",
     "sirv-cli": "^0.4.4",
     "svelte": "^3.18.1"
   },

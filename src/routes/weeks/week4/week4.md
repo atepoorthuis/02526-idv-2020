@@ -152,3 +152,11 @@ To further set up your local development environment, we will need to walk throu
 - Install the necessary dependencies by running `npm install`
 - Run a local development server by running `npm start`
 - Once everything works OK, stage our changes, commit and push the change to Github again.
+
+## Recap
+By the end of this week, you should be able to understand and apply in practice the following concepts:
+- How to declare your own JS functions and use them to refactor your code.
+- Understand the concept of event handlers, and apply them using the `addEventListener` function to allow for simple user interactions within a graph.
+- Understand the objective of `git`, its relation to github.com, and the git core concepts: `clone`, `stage`, `commit`, `push` and `pull`.
+- Use VS code to edit the source code of a project, and use its built-in git integration to save to changes to version control.
+- Use of `npm` to install dependencies and run a local development server with hot-reload.
