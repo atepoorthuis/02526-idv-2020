@@ -1,5 +1,5 @@
 ---
-solution: true
+solution: false
 ---
 # Week 6: Declarative Programming II (Svelte cont'd + D3)
 

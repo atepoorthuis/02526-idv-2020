@@ -28,6 +28,7 @@ a {
 		<li><a href='/assignments/assignment2'>Assignment 2</a></li>
 		<li><a href='/weeks/week5/week5'>Week 5: Declarative Programming I</a></li>
 		<li><a href='/weeks/week6/week6'>Week 6: Declarative Programming II</a></li>
+		<li><a href='/assignments/assignment3'>Assignment 3</a></li>
 	</ul>
 
 </nav>
