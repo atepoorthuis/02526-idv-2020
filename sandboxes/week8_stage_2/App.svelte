@@ -1,8 +1,11 @@
 <script>
-  import { scaleLinear } from 'd3-scale'
+  import { scaleLinear, scaleTime } from 'd3-scale'
   import { data } from './data.js'
-  import { Graphic, Point } from '@snlab/florence'
+  import { Graphic, Point, Label, XAxis, YAxis } from '@snlab/florence'
 
+  const scaleX = scaleLinear().domain([1740, 1900])
+  const scaleY = scaleLinear().domain([0, 8000000])
+  // const scaleY = scaleTime().domain([new Date(1740, 1, 1), new Date(1900, 1, 1)])
 </script>
 
 
@@ -19,6 +22,13 @@
   </div>
   <div class="main-chart">
     <!-- main chart -->
+    <Graphic {scaleX} {scaleY} padding={60} flipY>
+      {#each data as item}
+       <Point x={item.year} y={item.population} />
+      {/each}
+      <XAxis />
+      <YAxis />
+    </Graphic>
   </div>
 </div>
 
