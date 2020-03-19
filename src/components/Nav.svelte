@@ -30,6 +30,7 @@ a {
 		<li><a href='/weeks/week5/week5'>Week 5: Declarative Programming I</a></li>
 		<li><a href='/weeks/week6/week6'>Week 6: Declarative Programming II</a></li>
 		<li><a href='/assignments/assignment3'>Assignment 3</a></li>
+		<li><a href='/weeks/week8/week8'>Week 8: Grammar of Graphics I</a></li>
 	</ul>
 
 </nav>
