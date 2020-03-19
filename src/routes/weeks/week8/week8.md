@@ -38,7 +38,7 @@ After importing we can use it within HTML markup as per normal:
 ```svelte
 <div class="main-chart">
   <!-- main chart -->
-  <Graphic width="500" height="500">
+  <Graphic width={500} height={500}>
   </Graphic>
 </div>
 ```
@@ -81,7 +81,7 @@ In the previous section we placed a point by specifying 'pixel space'. We can no
 ```svelte
 <div class="main-chart">
   <!-- main chart -->
-  <Graphic width="500" height="500" {scaleX} {scaleY}>
+  <Graphic width={500} height={500} {scaleX} {scaleY}>
     <Point x={1800} y={6000000}>
   </Graphic>
 </div>
