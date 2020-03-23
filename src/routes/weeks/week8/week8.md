@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 8: A Grammar of Graphics I (Florence - a grammar for Svelte)
 
@@ -54,6 +54,8 @@ We will do this section in class together.
 :::
 
 ::: solution
+::: codesandbox sandboxes/week8_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
 :::
 
 ## Using scales
@@ -95,6 +97,8 @@ We will do this section in class together.
 :::
 
 ::: solution
+::: codesandbox sandboxes/week8_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
 :::
 
 ## Axis
@@ -123,6 +127,8 @@ We will do this section in class together.
 :::
 
 ::: solution
+::: codesandbox sandboxes/week8_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
 :::
 
 ## Additional marks
@@ -138,4 +144,24 @@ We will do this section in class together.
 :::
 
 ::: solution
+To replace the original Point mark with a Label mark, all we need to do is import the correct mark and supply it with its required properties. In addition to `x` and `y` that we also used for Point, we also need to supply an actual `text` to display for each label.
+
+::: codesandbox sandboxes/week8_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
+
+To display a bar or rectangle for each year, we need to define both the starting as well as the end point on the x axis. In practice, we can use d3's [band scale](https://github.com/d3/d3-scale#band-scales) to do this. But since we know that each observation is for one decade, we just make the bars 5 years wide as an easier shortcut.
+
+::: codesandbox sandboxes/week8_stage_6 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
+
+To display a single line instead of individual points changes the nature of our visualizations: instead of 1 data point -> 1 mark, we now visualize many data points -> 1 mark. To do that, we need to supply an array of _all_ x values and an array of _all_ y values to a single line mark. We can this using the Javascript's [map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) method that allows us to create a new array from our original `data` array with the right properties (year and population respectively) extracted.
+
+::: codesandbox sandboxes/week8_stage_7 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
+
+Finally, to change from a simple linear scale based on the integer of the year, we bring in d3's [temporal scale](https://github.com/d3/d3-scale#time-scales). To do this, we also need to convert the year values to a [proper JavaScript Date type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date).
+
+::: codesandbox sandboxes/week8_stage_8 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
+:::
+
 :::
