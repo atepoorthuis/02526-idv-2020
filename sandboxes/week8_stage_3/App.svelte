@@ -3,6 +3,8 @@
   import { data } from './data.js'
   import { Graphic, Point } from '@snlab/florence'
 
+  const scaleX = scaleLinear().domain([1740, 1900])
+  const scaleY = scaleLinear().domain([0, 8000000])
 </script>
 
 
@@ -19,8 +21,10 @@
   </div>
   <div class="main-chart">
     <!-- main chart -->
-    <Graphic width={500} height={500}>
-       <Point x={250} y={250} />
+    <Graphic {scaleX} {scaleY} flipY>
+      {#each data as item}
+       <Point x={item.year} y={item.population} />
+      {/each}
     </Graphic>
   </div>
 </div>
