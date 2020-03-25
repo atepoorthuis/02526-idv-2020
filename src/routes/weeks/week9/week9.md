@@ -112,7 +112,7 @@ Hint: to create a histogram, use the [bin transformation](https://github.com/spa
 :::
 
 ::: solution
-::: codesandbox sandboxes/week9_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+::: codesandbox sandboxes/week9_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
 
