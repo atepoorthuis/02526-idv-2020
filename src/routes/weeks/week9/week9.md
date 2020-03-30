@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 9: A Grammar of Graphics II (Facets)
 
@@ -112,11 +112,15 @@ Hint: to create a histogram, use the [bin transformation](https://github.com/spa
 :::
 
 ::: solution
-::: codesandbox sandboxes/week9_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+::: codesandbox sandboxes/week9_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
 
 ## Auto-generating facets
 ::: div callout
-We will do this section together on Thursday (if we have time this week)!
+:::
+
+::: solution
+::: codesandbox sandboxes/week9_stage_6 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+:::
 :::
