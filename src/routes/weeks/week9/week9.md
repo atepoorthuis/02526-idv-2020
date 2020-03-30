@@ -117,7 +117,12 @@ Hint: to create a histogram, use the [bin transformation](https://github.com/spa
 :::
 
 ## Auto-generating facets
+In the previous section, we have created 4 different sections or facets by hand. However, for larger systems this can become quite tedious. For this reason, `florence` has a [built-in `Grid` component](https://florence-docs.netlify.com/docs/core/grid) that allows you to construct both simple and more advanced ones. It largely follows the [CSS Grid logic](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) to do this.
+
+Most importantly, you can specify a specific number of rows and columns -- and an optional list of area or cell names. The `Grid` will use this information to calculate the right positioning properties for any `Sections` within the Grid.
+
 ::: div callout
+In the below example, we use the `Grid` component to construct a scatterplot for a series of different towns. Can you extend the logic within the sandbox to dynamically create a scatterplot for every town in the dataset?
 :::
 
 ::: solution
