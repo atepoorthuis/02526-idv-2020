@@ -1,5 +1,5 @@
 ---
-solution: true
+solution: false
 ---
 # Week 10: Interaction
 
@@ -12,7 +12,6 @@ Up until now, we have created graphs that display all data by default. However, 
 One way to enable this type of exploration, is by adding a dropdown menu that will filter the dataset based on the user's choice. We can create dropdown elements with the [`<select>` element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) (see the [Svelte examples on bindings](https://svelte.dev/examples#select-bindings) for an implementation example). 
 
 In this section, we will use the final sandbox of Week 9 as a starting point.
-
 
 ::: codesandbox sandboxes/week9_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte
 :::
@@ -37,7 +36,9 @@ We will do this section in class together.
 Instead of using an external UI element to interact with a visualization, we can also use (elements of) a visualization itself. For example, instead of selecting an option from a dropdown menu, we can select a (categorical) option in one view, and update another view based on that choice. In our case, for example, we can use the flat type bar chart to update the data displayed in the price histogram. To do this, we need to enable the [appropriate interaction event listeners](https://florence-docs.netlify.com/docs/concepts/interactivity) on our Marks.
 
 ::: div callout
-We will do this section on Thursday.
+We will do this section together in class.
+
+Tip: you can add the `transition` property on any Mark or Layer to animate the transition from one dataset to another. Try adding `transition={1000}` as a property on the `RectangleLayer` of the histogram. 
 :::
 
 ::: solution
