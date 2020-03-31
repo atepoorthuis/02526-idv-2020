@@ -38,7 +38,7 @@ Instead of using an external UI element to interact with a visualization, we can
 ::: div callout
 We will do this section together in class.
 
-Tip: you can add the `transition` property on any Mark or Layer to animate the transition from one dataset to another. Try adding `transition={1000}` as a property on the `RectangleLayer` of the histogram. 
+Tip: you can add the `transition` property on any Mark or Layer to create an animated transition from one dataset to another (as opposed to the default 'jump cut' (cf. VAD Chapter 11)). Try adding `transition={1000}` as a property on the `RectangleLayer` of the histogram. 
 :::
 
 ::: solution
