@@ -123,6 +123,22 @@ Most importantly, you can specify a specific number of rows and columns -- and a
 
 ::: div callout
 In the below example, we use the `Grid` component to construct a scatterplot for a series of different towns. Can you extend the logic within the sandbox to dynamically create a scatterplot for every town in the dataset?
+
+N.B. We make the positional properties for each cell available to the section through the [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). It 'spreads' out all the keys available in an object onto the component – check out [the Svelte tutorial for an example in that context](https://svelte.dev/tutorial/spread-props).
+
+Doing this:
+```
+<Section {...cells[town]}>
+```
+Is equivalent to:
+```
+<Section
+ x1={cells[town].x1}
+ x2={cells[town].x2}
+ y1={cells[town].y1}
+ y2={cells[town].y2}
+>
+```
 :::
 
 ::: solution
