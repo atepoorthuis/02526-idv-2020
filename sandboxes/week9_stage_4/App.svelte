@@ -8,12 +8,7 @@
   const salesPerType = sales
     .groupBy('flat_type')
     .summarise({ total_count: { resale_price: 'count' } })
-  console.log(salesPerType.data())
 
-  const salesDistribution = sales
-    .bin({ groupBy: 'resale_price', method: 'EqualInterval', numClasses: 10 })
-    .summarise({ total_count: { resale_price: 'count' } })
-  console.log(salesDistribution)
 </script>
 
 
@@ -32,10 +27,10 @@
         flipY
       >
         <RectangleLayer 
-        x1={0}
-        x2={salesPerType.column('total_count')}
-        y1={salesPerType.column('flat_type')}
-        y2={({ scaleY }) => salesPerType.map('flat_type', ft => scaleY(ft) + scaleY.bandwidth())}
+          x1={0}
+          x2={salesPerType.column('total_count')}
+          y1={salesPerType.column('flat_type')}
+          y2={({ scaleY }) => salesPerType.map('flat_type', ft => scaleY(ft) + scaleY.bandwidth())}
         />
         <XAxis labelFontSize={8} />
         <YAxis labelFontSize={8} />

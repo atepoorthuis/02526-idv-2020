@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 9: A Grammar of Graphics II (Facets)
 
@@ -112,11 +112,36 @@ Hint: to create a histogram, use the [bin transformation](https://github.com/spa
 :::
 
 ::: solution
-::: codesandbox sandboxes/week9_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+::: codesandbox sandboxes/week9_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
 
 ## Auto-generating facets
+In the previous section, we have created 4 different sections or facets by hand. However, for larger systems this can become quite tedious. For this reason, `florence` has a [built-in `Grid` component](https://florence-docs.netlify.com/docs/core/grid) that allows you to construct both simple and more advanced ones. It largely follows the [CSS Grid logic](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) to do this.
+
+Most importantly, you can specify a specific number of rows and columns -- and an optional list of area or cell names. The `Grid` will use this information to calculate the right positioning properties for any `Sections` within the Grid.
+
 ::: div callout
-We will do this section together on Thursday (if we have time this week)!
+In the below example, we use the `Grid` component to construct a scatterplot for a series of different towns. Can you extend the logic within the sandbox to dynamically create a scatterplot for every town in the dataset?
+
+N.B. We make the positional properties for each cell available to the section through the [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax). It 'spreads' out all the keys available in an object onto the component – check out [the Svelte tutorial for an example in that context](https://svelte.dev/tutorial/spread-props).
+
+Doing this:
+```
+<Section {...cells[town]}>
+```
+Is equivalent to:
+```
+<Section
+ x1={cells[town].x1}
+ x2={cells[town].x2}
+ y1={cells[town].y1}
+ y2={cells[town].y2}
+>
+```
+:::
+
+::: solution
+::: codesandbox sandboxes/week9_stage_6 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+:::
 :::
