@@ -93,16 +93,16 @@ In the first half of the course, we focus on getting up to speed on the basic bu
         - VAD Chapter 11: Manipulate View
         - VAD Chapter 13: Reduce Items and Attributes  
         - VAD Chapter 14: Embed: Focus+Context
-11. Project Studio
-
-### Block 6: Visualization Systems II
-12. Maps & Cartography
+11. Maps & Cartography
     - Reading:
         - VAD Chapter 8: Arrange Spatial Data
         - VAD Chapter 10: Map Color and Other Channels
         - Making Maps Chapter 8: Map Classification
         - Making Maps Chapter 9: Map Symbolization
-13. UI Design for viz systems & Project Studio
+
+### Block 6: Visualization Systems II
+12.  Project Studio
+13.  Project Studio
     - Reading:
         - VAD Chapter 15: Analysis Case Studies
-14. Final Project Studio
+14.  Final Project Presentations
