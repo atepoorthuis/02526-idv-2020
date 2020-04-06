@@ -35,6 +35,7 @@ a {
 		<li><a href='/weeks/week9/week9'>Week 9: Grammar of Graphics II</a></li>
 		<li><a href='/weeks/week10/week10'>Week 10: Interaction</a></li>
 		<li><a href='/assignments/assignment4'>Assignment 4</a></li>
+		<li><a href='/weeks/week11/week11'>Week 11: Maps</a></li>
 	</ul>
 
 </nav>
