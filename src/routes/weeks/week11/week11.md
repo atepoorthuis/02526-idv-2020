@@ -76,6 +76,8 @@ The library, and the necessary imports have already been set up in your `App.sve
 1. Set up our 'ordinal' color scale – using the domain from the `REGION_N` column and setting the range based on the `schemeAccent` color scheme.
 2. Set the `fill` property of the polygons. Although for positional properties the scale gets applied automatically, here we have to make sure the scale is applied to each value in the dataset (hint: use the [map method](https://github.com/spatialnetworkslab/florence-datacontainer#datacontainer_map))
 
+![Planning Regions](/images/pln_regions.png)
+
 ::: div callout
 We will create a video to walk through these steps.
 :::
