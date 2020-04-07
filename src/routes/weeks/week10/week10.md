@@ -25,6 +25,7 @@ Our goal is to add a dropdown menu that lists all the town names. When a user se
 
 ::: div callout
 We will do this section in class together.
+<iframe title="IDV Week 10 31 March 2020" width="560" height="315" src="https://www.youtube-nocookie.com/embed/50TlBsqiuT4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
@@ -38,7 +39,9 @@ Instead of using an external UI element to interact with a visualization, we can
 ::: div callout
 We will do this section together in class.
 
-Tip: you can add the `transition` property on any Mark or Layer to create an animated transition from one dataset to another (as opposed to the default 'jump cut' (cf. VAD Chapter 11)). Try adding `transition={1000}` as a property on the `RectangleLayer` of the histogram. 
+Tip: you can add the `transition` property on any Mark or Layer to create an animated transition from one dataset to another (as opposed to the default 'jump cut' (cf. VAD Chapter 11)). Try adding `transition={1000}` as a property on the `RectangleLayer` of the histogram.
+
+<iframe title="IDV Week 10 2 April 2020" width="560" height="315" src="https://www.youtube-nocookie.com/embed/QcuYUl6LVxQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution

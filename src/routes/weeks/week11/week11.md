@@ -55,6 +55,8 @@ As you now know, this structure is called GeoJSON – and `florence-datacontaine
 
 ::: div callout
 We will do this section in class together.
+
+<iframe title="IDV Week 11 7 April 2020" width="560" height="315" src="https://www.youtube-nocookie.com/embed/pZqw9yipji4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution show
@@ -80,6 +82,7 @@ The library, and the necessary imports have already been set up in your `App.sve
 
 ::: div callout
 We will create a video to walk through these steps.
+<iframe title="IDV Week 11 Choropleth maps – applying color" width="560" height="315" src="https://www.youtube-nocookie.com/embed/QiHyiE_aSoc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
@@ -103,7 +106,9 @@ To achieve this, you will have to switch out the planning area data with the hex
 
 ::: div callout
 We will create a video to walk through these steps.
+<iframe title="IDV Week 11 Choropleth maps – but now with hexagons" width="560" height="315" src="https://www.youtube-nocookie.com/embed/bqfDJ30wY0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
+
 
 ::: solution
 ::: codesandbox sandboxes/week11_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
@@ -123,6 +128,7 @@ To achieve this, we will:
 
 ::: div callout
 We will create a video to walk through these steps.
+<iframe title="IDV Week 11 Choropleth maps with continuous data" width="560" height="315" src="https://www.youtube-nocookie.com/embed/AVpxYpJ3UJQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution

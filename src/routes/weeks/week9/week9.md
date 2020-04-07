@@ -145,3 +145,8 @@ Is equivalent to:
 ::: codesandbox sandboxes/week9_stage_6 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
+
+## Thursday class live-stream recording
+::: div callout
+<iframe title="IDV Week 9 26 March 2020" width="560" height="315" src="https://www.youtube-nocookie.com/embed/mFEeanloLgk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+:::
