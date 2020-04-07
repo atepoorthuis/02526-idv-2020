@@ -1,0 +1,11 @@
+# Assignment 5
+
+For your fifth, and final, assignment, you will take your final project as a starting point and use the assignment to think through at least one type of user interaction for your project, including its implementation. You can use this assignment to create a first prototype for your final project. Although the final project is a group project, the assignment should be individual. This is an opportunity to discuss with your group mates and divide up the work for some specific milestones that need to be addressed in your project. A few ground rules:
+
+- Use at least one facet/view that you think might be useful for your project.
+- Base your visualization on your project data. If your data isn't ready yet, is really large, or is derived from some kind of (live) API, create a smaller, simpler (but realistic) static dataset to test and iterate your visualization with. The focus should be on the visualization design/user interaction, not on wrangling data for this assignment.
+- Pick at least one potential user interaction and think through what type of interaction might be useful and how this can be implemented.
+
+You do not have to figure this out in isolation! The teaching team is there to help you and work through the assignment with you. In addition, we have set aside Week 12 & 13 to discuss in more detail specific implementation questions that arise from your projects. Please add ideas (and vote for others' ideas) in our [shared Google Doc](https://docs.google.com/document/d/117F9aSEkr-nvq9P0_uzlj8FiTbJzZjntSkvmjyTYKSQ/edit?usp=sharing).
+
+Once you are finished, navigate to your own Github repository at https://github.com/02526-idv/[your-name]. Create a new issue, title it 'Assignment 5 by [your_name]', and include both a screenshot of the final result as well as a link to the CodeSandbox that belongs to Assignment 5. Although you are likely to use a local development environment and a git repo to do version control at this point, sharing your final result as a CodeSandbox allows others to more easily see and learn from your work. **The assignment is due on 19 April**.
