@@ -57,7 +57,7 @@ As you now know, this structure is called GeoJSON – and `florence-datacontaine
 We will do this section in class together.
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week11_stage_2a codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
