@@ -1,5 +1,5 @@
 ---
-solution: true
+solution: false
 ---
 # Week 11: Maps & Cartography
 
@@ -151,7 +151,7 @@ We will discuss and do this during Thursday's class together.
 :::
 
 ## Replicating Making Maps' classification comparison
-In the final section, we will extend the single map further to recreate the visualization and comparison between classification technique found in Making Maps pp. 174-181. We will do this collectively in smaller groups.
+In the final section, we will extend the single map further to recreate the visualization and comparison between classification technique found in Making Maps pp. 174-181. We will do this collectively in smaller groups (sign up in shared Google Doc).
 
 - Group 1: Create histogram above map.
 - Group 2: Allow user to change the number of classes and the classification technique in the map.
