@@ -106,7 +106,7 @@ To achieve this, you will have to switch out the planning area data with the hex
 
 ::: div callout
 We will create a video to walk through these steps.
-<iframe title="IDV Week 11 Choropleth maps – but now with hexagons" width="560" height="315" src="https://www.youtube-nocookie.com/embed/bqfDJ30wY0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="IDV Week 11 Choropleth maps – but now with hexagons" width="560" height="315" src="https://www.youtube-nocookie.com/embed/AVpxYpJ3UJQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
 :::
 
 
@@ -128,7 +128,7 @@ To achieve this, we will:
 
 ::: div callout
 We will create a video to walk through these steps.
-<iframe title="IDV Week 11 Choropleth maps with continuous data" width="560" height="315" src="https://www.youtube-nocookie.com/embed/AVpxYpJ3UJQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe title="IDV Week 11 Choropleth maps with continuous data" width="560" height="315" src="https://www.youtube-nocookie.com/embed/bqfDJ30wY0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
