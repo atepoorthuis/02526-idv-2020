@@ -85,7 +85,7 @@ We will create a video to walk through these steps.
 <iframe title="IDV Week 11 Choropleth maps – applying color" width="560" height="315" src="https://www.youtube-nocookie.com/embed/QiHyiE_aSoc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week11_stage_2b codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
@@ -110,7 +110,7 @@ We will create a video to walk through these steps.
 :::
 
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week11_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
@@ -131,7 +131,7 @@ We will create a video to walk through these steps.
 <iframe title="IDV Week 11 Choropleth maps with continuous data" width="560" height="315" src="https://www.youtube-nocookie.com/embed/bqfDJ30wY0I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week11_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
@@ -151,9 +151,10 @@ To achieve this, we will:
 
 ::: div callout
 We will discuss and do this during Thursday's class together.
+<iframe title="IDV Week 11 9 April 2020" width="560" height="315" src="https://www.youtube-nocookie.com/embed/o1IcQkGbgJA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week11_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
