@@ -37,6 +37,7 @@ a {
 		<li><a href='/assignments/assignment4'>Assignment 4</a></li>
 		<li><a href='/weeks/week11/week11'>Week 11: Maps</a></li>
 		<li><a href='/assignments/assignment5'>Assignment 5</a></li>
+		<li><a href='/weeks/week12/week12'>Week 12: Project Studio</a></li>
 	</ul>
 
 </nav>
