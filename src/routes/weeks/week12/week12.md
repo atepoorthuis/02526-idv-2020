@@ -43,7 +43,7 @@ We will do this section in class together.
 ## Importing CSV files with d3-dsv
 So far, we have always imported data directly from `.js` files (which in turn exported a variable with the data in the right format). In practice, data often 'lives' in `.json` or `.csv` files that cannot be readily imported into a JavaScript application. You might remember that for smaller datasets we can convert things manually with online services like [Mr Data Converter](https://shancarter.github.io/mr-data-converter/) or export from R with [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html). But for larger datasets, it is often more convenient to directly load the data into your project. To aid in this process, we can, again, use one of the `d3` libraries, in this case [d3-dsv](https://github.com/d3/d3-dsv).
 
-This library allows us to parse or read CSV data into a format that we can work with within JavaScript. To use it, we will also need to use [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to, well, actually fetch the external file or resource that holds our csv data. Using `fetch` also forces us to engage with one core concept of JavaScript that we have so far avoided: asynchronicity (see [Eloquent JavaScript Chapter 11](https://eloquentjavascript.net/11_async.html)).
+This library allows us to parse or read CSV data into a format that we can work with within JavaScript. To use it, we will also need to use [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) to, well, actually fetch the external file or resource that holds our csv data. Using `fetch` also forces us to engage with one core concept of JavaScript that we have so far avoided: asynchronicity (see [Eloquent JavaScript Chapter 11](https://eloquentjavascript.net/11_async.html)). To make this a bit easier to work with, we will create an [async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to fetch our data.
 
 In this section, we will replace our direct `import` of the HDB resale data with a process that will fetch and parse the data from a `.csv` file instead. The key steps are as follows:
 
@@ -51,24 +51,35 @@ In this section, we will replace our direct `import` of the HDB resale data with
 2. Use `d3-dsv` to parse the raw csv text.
 3. Convert output of `d3-dsv` to a regular DataContainer.
 
+You can use this sandbox as a starting point, which has the necessary libraries pre-installed and the csv data stored in the `public/data/` folder.
+
+::: codesandbox sandboxes/week12_stage_3 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+:::
+
 ::: div callout
 We will create a video to walk through these steps.
+<iframe title="IDV Week 12 Importing CSV files with d3-dsv" width="560" height="315" src="https://www.youtube-nocookie.com/embed/n3OGUISAKUI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
-::: codesandbox sandboxes/week11_stage_2b codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+::: codesandbox sandboxes/week12_stage_4 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
 
 ## Creating network layouts with d3-force
-So far, we have relied on a relatively straightforward scaling process to determine the positional attributes of Marks in our visualization. With network or graph data, this process is often much less straightforward. Graphs consists of nodes and edges, but neither nodes or edges have pre-determined absolute positions. The positions of nodes are often relative to other nodes, based on the edges that connect them. So to visualize this network of nodes and edges, we need a way to deduce an appropriate location. This can be done through all kinds of different approaches (cf. multi-dimensional scaling in CUA), but often we use a graph layout algorithm for this. You can find many JS libraries that offer this functionality – we will practice the process with the `d3-force` library as its use is largely consistent with the other libraries we have been using so far. In this section, we will walk through and replicate [Bostock's example with data from Les Miserables](https://observablehq.com/@d3/force-directed-graph?collection=@d3/d3-force). We will use `d3-force` for calculating the layout of the graph, but will keep using Svelte and Florence for actually drawing the graph.
+So far, we have relied on a relatively straightforward scaling process to determine the positional attributes of Marks in our visualization. With network or graph data, this process is often much less straightforward. Graphs consists of nodes and edges, but neither nodes or edges have pre-determined absolute positions. The positions of nodes are often relative to other nodes, based on the edges that connect them. So to visualize this network of nodes and edges, we need a way to deduce an appropriate location. This can be done through all kinds of different approaches (cf. multi-dimensional scaling in CUA), but often we use a graph layout algorithm for this. You can find many JS libraries that offer this functionality – we will practice the process with the `d3-force` library as its use is largely consistent with the other libraries we have been using so far. In this section, we will walk through and replicate [Bostock's example with data from Les Miserables](https://observablehq.com/@d3/force-directed-graph?collection=@d3/d3-force). We will use `d3-force` for calculating the layout of the graph, but will keep using Svelte and Florence for actually drawing the graph. You can use the below sandbox as a starting point.
+
+::: codesandbox sandboxes/week12_stage_5 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+:::
+
 
 ::: div callout
 We will create a video to walk through these steps.
+<iframe title="IDV Week 12 Creating network layouts with d3-force" width="560" height="315" src="https://www.youtube-nocookie.com/embed/OIW7h5I2xLU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
 ::: solution
-::: codesandbox sandboxes/week11_stage_2b codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
+::: codesandbox sandboxes/week12_stage_6 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
 

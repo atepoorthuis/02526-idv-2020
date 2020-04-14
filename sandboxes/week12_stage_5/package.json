@@ -1,0 +1,28 @@
+{
+  "name": "week12-stage-1",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2"
+  },
+  "dependencies": {
+    "@snlab/florence": "0.1.19",
+    "d3-force": "^2.0.1",
+    "sirv-cli": "^0.4.4",
+    "svelte": "^3.18.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "keywords": [
+    "svelte",
+    "starter"
+  ],
+  "description": "Svelte example starter project"
+}
