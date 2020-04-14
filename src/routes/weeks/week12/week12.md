@@ -32,9 +32,10 @@ Our goal is to import the `regressionLinear` function from `d3-regression` and u
 
 ::: div callout
 We will do this section in class together.
+<iframe title="IDV Week 12 14 April 2020" width="560" height="315" src="https://www.youtube-nocookie.com/embed/0mmNwVD8QLs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 :::
 
-::: solution
+::: solution show
 ::: codesandbox sandboxes/week12_stage_2 codemirror=1&view=split&fontsize=12&hidenavigation=1&hidedevtools=1&theme=light&module=App.svelte&runonclick=1
 :::
 :::
