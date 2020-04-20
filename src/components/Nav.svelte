@@ -38,6 +38,7 @@ a {
 		<li><a href='/weeks/week11/week11'>Week 11: Maps</a></li>
 		<li><a href='/assignments/assignment5'>Assignment 5</a></li>
 		<li><a href='/weeks/week12/week12'>Week 12: Project Studio</a></li>
+		<li><a href='/weeks/week13/week13'>Week 13: Project Studio</a></li>
 	</ul>
 
 </nav>

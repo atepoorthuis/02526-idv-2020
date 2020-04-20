@@ -1,5 +1,5 @@
 ---
-solution: false
+solution: true
 ---
 # Week 12: Project Studio
 
@@ -84,8 +84,8 @@ We will create a video to walk through these steps.
 :::
 
 ## Using turf for spatial operations
-To be discussed on Thursday
+To be discussed in Thursday's live discussion on Microsoft Teams
 
 ## Publishing & sharing your project
-To be discussed on Thursday
+To be discussed in Thursday's live discussion on Microsoft Teams
 
