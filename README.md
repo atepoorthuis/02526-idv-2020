@@ -1,10 +1,13 @@
 # 02.526: Interactive Data Visualization
-### Ate Poorthuis // ate_poorthuis@sutd.edu.sg  
   
 **January Term 2020**  
+**Instructor:** Ate Poorthuis 
+
 **Tue 2.30-4.00pm** Think Tank 17 (2.202)  
 **Thu 1-2.30pm** Think Tank 17 (2.202)  
-*Office Hours: By appointment*
+*Office Hours:* By appointment  
+
+*Teaching Assistants:* Bianchi Dy, Jo Hsi Keong, Feihong Zeng
 
 ## Course Description
 This course teaches students the concepts, skills and techniques of online, interactive map design and data visualization. In doing so, it covers both the modern web development workflow and Javascript programming. These fundamental programming tools and techniques are mastered in an applied context of designing and building interactive visualizations. Apart from a foundational understanding of the building blocks of the modern web (HTML, CSS, Javascript), students learn to build visualizations using industry-standard Javascript libraries through a series of lab-based assignments and projects. The course keeps a focus on the entire iterative design workflow throughout the semester and culminates in a project in which a sequence of prototypes leads to a final online, interactive data visualization.
@@ -41,10 +44,10 @@ In addition to the readings listed below and weekly lab hand-outs, we use this t
 - [*Visualization Analysis and Design*](https://www.amazon.com/Visualization-Analysis-Design-AK-Peters/dp/1466508914/) (VAD), Tamara Munzner, CRC Press (2014)
 
 ## Software
-We will only use open-source software in this course. Most of the course is based on HTML/CSS/JS, but we will also make use of [Svelte.js](https://svelte.dev) from Week 5 onwards. In the first weeks, we will use [CodeSandbox](https://codesandbox.io/) as our code editor. In later weeks, it is recommended to use a code editor installed on your own laptop. If you do not have a preference yet, I suggest you use [Visual Studio Code](https://code.visualstudio.com/). You also need to install [Git](https://git-scm.com/download) (if you're on Mac, I suggest you install [Homebrew](http://brew.sh/) first and install Git with `brew install git`).
+We will only use open-source software in this course. Most of the course is based on HTML/CSS/JS, but we will also make use of [Svelte](https://svelte.dev/) from Week 5 onwards. In the first weeks, we will use [CodeSandbox](https://codesandbox.io/) as our code editor. In later weeks, it is recommended to use a code editor installed on your own laptop. If you do not have a preference yet, I suggest you use [Visual Studio Code](https://code.visualstudio.com/). You also need to install [Git](https://git-scm.com/download) (if you're on Mac, I suggest you install [Homebrew](http://brew.sh/) first and install Git with `brew install git`).
 
 ## Detailed Outline
-In the first half of the course, we focus on getting up to speed on the basic building blocks of data visualization on the web. We do so by recreating visualizations from Du Bois' 1900 Paris Exposition. In the second half of the course, we build on this foundation by moving from individual charts to *systems* of (interactive) visualizations, tentatively using a dataset on HDB Resale Prices (explored more quantitatively in 02.522 Computational Urban Analysis).
+In the first half of the course, we focus on getting up to speed on the basic building blocks of data visualization on the web. We do so by recreating visualizations from [Du Bois' 1900 Paris Exposition](http://www.loc.gov/pictures/search/?q=drawing&co=anedub&st=gallery). In the second half of the course, we build on this foundation by moving from individual charts to *systems* of (interactive) visualizations, tentatively using a dataset on HDB Resale Prices (explored more quantitatively in 02.522 Computational Urban Analysis).
 
 ### Block 1: Introduction to a 'modern' visualization workflow
 1. HTML / SVG ('Drawing')
@@ -55,17 +58,17 @@ In the first half of the course, we focus on getting up to speed on the basic bu
 2. CSS / Git workflow ('Styling') 
     - Reading:
         - VAD Chapter 2: What: Data Abstraction?
-        - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS) (from `Introduction to CSS overview` to `Simple Selectors`)
-        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
+        - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps) (from `CSS First steps Overview` to `Getting Started with CSS`)
 
 ### Block 2: Programmatic Visualization
 3. Javascript Fundamentals I
     - Reading:
         - VAD Chapter 3: Why: Task Abstraction
-        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 1-3)
+        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 1-4)
 4. Javascript Fundamentals II ('Interacting')
     - Reading:
-        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 4; 13-15)
+        - [Ry's Git Tutorial](https://www.amazon.com/Rys-Git-Tutorial-Ryan-Hodson-ebook/dp/B00QFIA5OC) (Chapter 1-4)
+        - [Eloquent Javascript](https://eloquentjavascript.net/) (Chapter 13-15)
 
 ### Block 3: Reactive Visualization
 5. Declarative & Reactive Programming I (Introduction to Svelte)
@@ -78,11 +81,11 @@ In the first half of the course, we focus on getting up to speed on the basic bu
         - [Explorable Explanations](http://worrydream.com/ExplorableExplanations/)
 7. **BREAK**
 ### Block 4: Grammar of Graphics
-1. A Grammar of Graphics I (Florence - a grammar for Svelte)
+8. A Grammar of Graphics I (Florence - a grammar for Svelte)
     - Reading:
         - Wickham's [A Layered Grammar of Graphics](https://vita.had.co.nz/papers/layered-grammar.html)
         - Wilkinson's Grammar of Graphics. Ch 1 Introduction; Ch 6 Scales; Ch 10 Aesthetics. [Access through SUTD Library](https://link.springer.com/book/10.1007%2F0-387-28695-0).
-2. A Grammar of Graphics II (Facets)
+9. A Grammar of Graphics II (Facets)
     - Reading:
         - VAD Chapter 5 & 7 (Review)
         - VAD Chapter 12: Facets into Multiple Views 
@@ -93,16 +96,16 @@ In the first half of the course, we focus on getting up to speed on the basic bu
         - VAD Chapter 11: Manipulate View
         - VAD Chapter 13: Reduce Items and Attributes  
         - VAD Chapter 14: Embed: Focus+Context
-11. Project Studio
-
-### Block 6: Visualization Systems II
-12. Maps & Cartography
+11. Maps & Cartography
     - Reading:
         - VAD Chapter 8: Arrange Spatial Data
         - VAD Chapter 10: Map Color and Other Channels
         - Making Maps Chapter 8: Map Classification
         - Making Maps Chapter 9: Map Symbolization
-13. UI Design for viz systems & Project Studio
+
+### Block 6: Visualization Systems II
+12.  Project Studio
+13.  Project Studio
     - Reading:
         - VAD Chapter 15: Analysis Case Studies
-14. Final Project Studio
+14.  Final Project Presentations
