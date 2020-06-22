@@ -1,5 +1,5 @@
 # Final Project Video Gallery
-You will find a gallery of all final project videos here. Each submission is explained through video by the group with an introduction of the project, its main purpose and the actual visualization. Students also speak out 1-2 of the aspects they have found particularly interesting (design decisions, technical hurdles, etc.) and talk through how they approached these issues and what solution the came up with. You can view the code for each project in the Codesandbox/Github, and see the whole visualisation/application in action by clicking the website link. 
+You will find a gallery of all final project videos here. Each submission is explained through video by the group with an introduction of the project, its main purpose and the actual visualization. Students also discuss 1-2 aspects they have found particularly interesting (design decisions, technical hurdles, etc.) and talk through how they approached these issues and what solution the came up with. You can view the code for each project in the Codesandbox/Github, and see the whole visualisation/application in action by clicking the website link. 
 
 ```js exec
   // use small Svelte component to make creating linked image gallery a bit easier
@@ -11,7 +11,7 @@ You will find a gallery of all final project videos here. Each submission is exp
 
 | Codesandbox/Github | Website |
 | ----------- | ------- |
-| https://github.com/02526-idv/kim-sun-tan | NA |
+| https://codesandbox.io/s/kim-sun-tan-idv-project-sfpd8 | https://sfpd8.csb.app/ |
 
 
 ## Visualisations about Airbnb trends in Singapore
@@ -20,7 +20,7 @@ You will find a gallery of all final project videos here. Each submission is exp
 
 | Codesandbox/Github | Website |
 | ----------- | ------- |
-| NA | NA |
+| https://codesandbox.io/s/idv-project-airbnbangiejeanettejia-xin-3b64n | https://wonderful-borg-f05d64.netlify.app/ |
 
 
 ## Bangalore: An interactive visualisation tool for spatial data
@@ -73,7 +73,7 @@ You will find a gallery of all final project videos here. Each submission is exp
 
 | Codesandbox/Github | Website |
 | ----------- | ------- |
-| NA | NA |
+| https://codesandbox.io/s/kobebryantproject-ccqdy | NA |
 
 ## Visualising amenities accessibility of migrant workers 
 ### Gareth, Hayley, Shao Wei
@@ -81,7 +81,7 @@ You will find a gallery of all final project videos here. Each submission is exp
 
 | Codesandbox/Github | Website |
 | ----------- | ------- |
-| NA | NA |
+| NA | http://idv-migrant-worker-dorms.appspot.com/ |
 
 ## Visualising migrations
 ### Michelle
@@ -89,4 +89,4 @@ You will find a gallery of all final project videos here. Each submission is exp
 
 | Codesandbox/Github | Website |
 | ----------- | ------- |
-| NA | NA |
+| https://codesandbox.io/s/4w0r3 | https://4w0r3.csb.app/ |

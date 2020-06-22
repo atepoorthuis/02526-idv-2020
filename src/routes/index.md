@@ -1,10 +1,13 @@
 # 02.526: Interactive Data Visualization
-### Ate Poorthuis // ate_poorthuis@sutd.edu.sg  
   
 **January Term 2020**  
+**Instructor:** Ate Poorthuis 
+
 **Tue 2.30-4.00pm** Think Tank 17 (2.202)  
 **Thu 1-2.30pm** Think Tank 17 (2.202)  
-*Office Hours: By appointment*
+*Office Hours:* By appointment  
+
+*Teaching Assistants:* Bianchi Dy, Jo Hsi Keong, Feihong Zeng
 
 ## Course Description
 This course teaches students the concepts, skills and techniques of online, interactive map design and data visualization. In doing so, it covers both the modern web development workflow and Javascript programming. These fundamental programming tools and techniques are mastered in an applied context of designing and building interactive visualizations. Apart from a foundational understanding of the building blocks of the modern web (HTML, CSS, Javascript), students learn to build visualizations using industry-standard Javascript libraries through a series of lab-based assignments and projects. The course keeps a focus on the entire iterative design workflow throughout the semester and culminates in a project in which a sequence of prototypes leads to a final online, interactive data visualization.
