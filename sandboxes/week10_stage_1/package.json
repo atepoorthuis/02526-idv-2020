@@ -14,7 +14,7 @@
     "@snlab/florence-datacontainer": "0.1.6",
     "d3-scale": "3.2.1",
     "sirv-cli": "^0.4.4",
-    "svelte": "^3.18.1"
+    "svelte": "^3.49.0"
   },
   "scripts": {
     "build": "rollup -c",
