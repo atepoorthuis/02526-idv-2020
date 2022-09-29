@@ -10,9 +10,9 @@
     "rollup-plugin-terser": "^5.1.2"
   },
   "dependencies": {
-    "@snlab/florence": "0.1.18",
+    "@snlab/florence": "0.4.0",
     "@snlab/florence-datacontainer": "0.1.6",
-    "d3-scale": "3.2.1",
+    "d3-scale": "4.0.2",
     "sirv-cli": "^0.4.4",
     "svelte": "^3.18.1"
   },
